@@ -6,37 +6,37 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: HyG
-brief-intro: Front-end Dev Engineer
+title: 肖雄的博客
+brief-intro: 一直在努力
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "https://superxiaoxiong.github.io/" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: gaohaoyang126
-facebook_username: gaohaoyang.water
-github_username:  Gaohaoyang
-email: gaohaoyang126@126.com
-weibo_username: 3115521wh
-zhihu_username: gaohaoyang
-linkedIn_username: gaohaoyang
-dribbble_username: 
+#twitter_username: gaohaoyang126
+#facebook_username: gaohaoyang.water
+github_username:  superxiaoxiong
+email: knight110_2016@foxmail.com
+#weibo_username: 3115521wh
+#zhihu_username: gaohaoyang
+linkedIn_username: superxiaoxiong
+#dribbble_username: 
 
-description_footer: 本站记录我前端之旅的沿途风景！
+description_footer: 本站记录我学习之旅！
 
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
 duoshuo_shortname: #hygblog
-disqus_shortname: gaohaoyang
+disqus_shortname: #gaohaoyang
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
 # hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
 # xxxxx字符串
-baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-google_analytics_id: UA-72449510-4 # google 分析追踪id
+baidu_tongji_id: 2f4f0378d3b1ecfd3a5658e37a8dbe5b
+google_analytics_id: #UA-72449510-4 # google 分析追踪id
 
 # Build settings
 markdown: kramdown

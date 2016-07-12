@@ -1,8 +1,6 @@
-# 关于这个博客主题
+# 摘要
 
-随着 jekyll 的版本升级，同时我也想重构我的旧版博客主题，因此在这个月对博客进行了重构加改版，这个仓库存放我的新博客，并且我也会一直使用这个主题。目前基本改版完成，后续可能还会有些细节上的修补。
-
-**博客访问地址：[http://gaohaoyang.github.io/](http://gaohaoyang.github.io/)**。若您喜欢这个新的博客主题，请给我个star以示鼓励吧，欢迎大家使用。
+这是我的个人博客，用来记录我在IT技能方面学习心得。博客的主题是基于[gaohaoyang](http://gaohaoyang.github.io/)的博客，十分感谢他。若您喜欢这个新的博客主题，请给个star以示鼓励吧，欢迎大家使用。
 
 ## 目录
 
@@ -116,7 +114,7 @@ disqus_shortname: xxx
 **欢迎使用这个主题，使用时请保留 footer 上的模板主题来源。** Theme designed by [HyG](https://github.com/gaohaoyang).
 ![footer](http://ww3.sinaimg.cn/large/7011d6cfjw1f3bepd8002j20hl02ct95.jpg)
 
-关于旧版博客，我不再维护，同时我把代码转移到了另一个仓库，见 [Gaohaoyang/old-blog](https://github.com/Gaohaoyang/old-blog)。
+关于旧版博客在另一个仓库，见 [Gaohaoyang/old-blog](https://github.com/Gaohaoyang/old-blog)。
 
 ### 统计
 
@@ -296,28 +294,6 @@ Configuration file: E:/GitWorkSpace/blog/_config.yml
 ### 6. 发布到 GitHub
 
 没什么问题，推送到自己的博客仓库即可。
-
-## 捐助 donate
-
-您也可以捐助我喝杯咖啡！感谢！
-
-支付宝
-
-![alipay](http://ww2.sinaimg.cn/large/7011d6cfjw1f3bk8ikzoij20740743z5.jpg)
-
-微信
-
-![wechat](http://ww2.sinaimg.cn/large/7011d6cfjw1f3bkdw3bslj206z06q3z6.jpg)
-
-感谢捐助的小伙伴！！！
-
-* 2016.07.11 收到 彦风 ¥6.66 捐赠
-* 2016.07.07 收到 Klci ¥2.50 捐赠
-* 2016.05.08 收到 1057 ¥10.57 捐赠
-* 2016.05.07 收到 吴林 ¥2 捐赠
-* 2016.04.29 收到 北归 ¥10 捐赠
-* 2016.04.28 收到 魏楚阳_Brian ¥2 捐赠
-* 2016.04.28 收到 薛彬 ¥8.8 捐赠
 
 
 ## Update Log
