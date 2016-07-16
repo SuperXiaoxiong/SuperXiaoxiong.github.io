@@ -31,7 +31,6 @@
     * [4. 写文章](#4-写文章)
     * [5. 本地运行](#5-本地运行)
     * [6. 发布到 GitHub](#6-发布到-github)
-* [捐助 donate](#捐助-donate)
 * [Update Log](#update-log)
 * [License](#license)
 
