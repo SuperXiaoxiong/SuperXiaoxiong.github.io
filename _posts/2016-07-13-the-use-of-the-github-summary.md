@@ -23,7 +23,7 @@ tags:  Git GitHub
 
 ## Git·þÎñ³ÌÐòµÄÊ¹ÓÃ
 
-Ê¹ÓÃ°ïÖú
+####Ê¹ÓÃ°ïÖú
 
 ```
 git [<command>] --help
@@ -54,7 +54,7 @@ GitÅäÖÃÐÅÏ¢·ÖÎªÈýÀà£º
 
 * Õë¶ÔÓÚµ±Ç°²Ö¿âÊý¾ÝµÄÅäÖÃÐÅÏ¢¡£						¹¤×÷Ä¿Â¼/.git/config
 
-ÅäÖÃGitÔËÐÐ»·¾³
+####ÅäÖÃGitÔËÐÐ»·¾³
 
 ```
 Ê¹ÓÃgit init
@@ -63,25 +63,24 @@ GitÅäÖÃÐÅÏ¢·ÖÎªÈýÀà£º
 »áÔÚµ±Ç°Ä¿Â¼ÏÂÉú³É.gitÎÄ¼þ
 
 
-²é¿´µ±Ç°»·¾³ÏÂÔËÐÐµÄconfigÐÅÏ¢
+####²é¿´µ±Ç°»·¾³ÏÂÔËÐÐµÄconfigÐÅÏ¢
 
 ```
 git config --list
 ```
 
-±È½ÏÖØÒªµÄÅäÖÃÓÐÓÃ»§Ãû³ÆºÍµç×ÓÓÊ¼þµØÖ·
+####±È½ÏÖØÒªµÄÅäÖÃÓÐÓÃ»§Ãû³ÆºÍµç×ÓÓÊ¼þµØÖ·
 
 ```
 git config --global user.name "ÓÃ»§Ãû"
 git config --global user.email "ÓÃ»§ÓÊÏä"
 ```
 
-ÆäÖÐÓÐ --system¡¢ --global¡¢ --local¡¢ --file <filename> Ñ¡Ïî£¬Ä¬ÈÏÊÇ--local£º´Ë²Ö¿âµÄ±¾µØÅäÖÃ£¬ global¶ÔÓ¦µ±Ç°ÓÃ»§£¬ system´ËÏµÍ³£¬ 
-
+ÆäÖÐÓÐ --system¡¢ --global¡¢ --local¡¢ --file <filename> Ñ¡Ïî£¬Ä¬ÈÏÊÇ--local£º´Ë²Ö¿âµÄ±¾µØÅäÖÃ£¬ global¶ÔÓ¦µ±Ç°ÓÃ»§£¬ system´ËÏµÍ³
 
 ###GitÌá½»Êý¾Ý
 
-²é¿´µ±Ç°¹¤×÷Ä¿Â¼×´Ì¬
+####²é¿´µ±Ç°¹¤×÷Ä¿Â¼×´Ì¬
 
 ```
 git status
@@ -97,14 +96,14 @@ git status
 
 * Î´¸ú×Ù(untracked):»¹Î´Ìá½»£¬Ò»°ãÊÇÐÂ½¨µÄÎÄ¼þ
 
-½«ÎÄ¼þÌá½»µ½ÔÝ´æÇø
+####½«ÎÄ¼þÌá½»µ½ÔÝ´æÇø
 
 ```
 git add ÎÄ¼þÃû		//Ìá½»µ±Ç°ÎÄ¼þ£¬¿ÉÒÔ¶à¸ö
 git add .           //½«µ±Ç°¹¤×÷Ä¿Â¼ÄÚµÄËùÓÐÎÄ¼þ¶¼Ò»ÆðÌí¼Óµ½ÔÝ´æÇøÓò
 ```
 
-½«ÔÝ´æÇøµÄÎÄ¼þÌá½»µ½Git°æ±¾²Ö¿â
+####½«ÔÝ´æÇøµÄÎÄ¼þÌá½»µ½Git°æ±¾²Ö¿â
 
 ```
 git commit -m "Ìá½»ËµÃ÷¡±
@@ -113,7 +112,7 @@ git commit -a -m "Modified again"     //×·¼Ó-a²ÎÊý£¬ÕâÑùGit»á½«ÒÔÇ°ËùÓÐ×·×Ù¹ýµÄÎ
 
 ###GitÀúÊ·Êý¾Ý¼°Æä²Ù×÷
 
-²é¿´ÀúÊ·¼ÇÂ¼£¬¿´µ½ËùÓÐµÄ¸üÐÂ¼ÇÂ¼£¨°´Ê±¼äÅÅÐò£¬×î½ü¸üÐÂµÄ»áÔÚÉÏÃæ£©£¬ÀúÊ·¼ÇÂ¼»á³ýÁË±£´æÎÄ¼þ¿ìÕÕ£¬»¹»áÏêÏ¸µÄ¼ÇÂ¼×ÅÎÄ¼þSHA-1Ð£ÑéºÍ£¬×÷ÕßµÄÐÕÃû£¬ÓÊÏä¼°¸üÐÂÊ±¼ä£¬
+####²é¿´ÀúÊ·¼ÇÂ¼£¬¿´µ½ËùÓÐµÄ¸üÐÂ¼ÇÂ¼£¨°´Ê±¼äÅÅÐò£¬×î½ü¸üÐÂµÄ»áÔÚÉÏÃæ£©£¬ÀúÊ·¼ÇÂ¼»á³ýÁË±£´æÎÄ¼þ¿ìÕÕ£¬»¹»áÏêÏ¸µÄ¼ÇÂ¼×ÅÎÄ¼þSHA-1Ð£ÑéºÍ£¬×÷ÕßµÄÐÕÃû£¬ÓÊÏä¼°¸üÐÂÊ±¼ä£¬
 
 ```
 git log
@@ -125,7 +124,7 @@ git log --pretty=oneline  	//--pretty²ÎÊý£¬Ëü¿ÉÒÔ¸ù¾Ý²»Í¬µÄ¸ñÊ½ÎªÎÒÃÇÕ¹Ê¾Ìá½»µÄÀ
 ```
 
 
-»¹Ô­Êý¾Ý
+####»¹Ô­Êý¾Ý
 
 ```
 git reset [<mode>] [<commit>] 
@@ -133,13 +132,13 @@ git reset [<mode>] [<commit>]
 ÆäÖÐmode ²ÎÊý Ñ¡Ôñ --hard £¬ËùÓÐ¶Ô¸ú×ÙÎÄ¼þµÄ±ä»¯¶¼»á±»·ÅÆú
 
 
-ÃüÁîÀ´²é¿´ËùÓÐµÄÀúÊ·¼ÇÂ¼,°üÀ¨±»»¹Ô­µã
+####ÃüÁîÀ´²é¿´ËùÓÐµÄÀúÊ·¼ÇÂ¼,°üÀ¨±»»¹Ô­µã
 
 ```
 git reflog
 ```
 
-»¹Ô­Ä³¸öÎÄ¼þ
+####»¹Ô­Ä³¸öÎÄ¼þ
 ```
 git checkout -- <file>
 ```
@@ -192,7 +191,7 @@ GithubÒÔ¼°Ô¶³Ì²Ö¿â¹ÜÀíµÄÊ¹ÓÃ·ÖÎªÌí¼ÓÃÜÔ¿¡¢²Ö¿â¹ÜÀí£¬ÔÚÌá½»µ½GithubÔ¶³Ì²Ö¿â±£¹ÜÊ±
 
 ###Ìí¼ÓÃÜÔ¿
 
-Éú³ÉÃÜÔ¿¶Ô
+####Éú³ÉÃÜÔ¿¶Ô
 ```
 ssh-keygen -t rsa -C "emailµØÖ·"
 ```
@@ -204,7 +203,7 @@ ssh-keygen -t rsa -C "emailµØÖ·"
 
 »Øµ½githubÉÏ£¬½øÈë Account Settings£¨ÕË»§ÅäÖÃ£©£¬×ó±ßÑ¡ÔñSSH Keys£¬Add SSH Key,titleËæ±ãÌî£¬Õ³ÌùÔÚÄãµçÄÔÉÏÉú³ÉµÄkey¡£
 
-ÎªÁËÑéÖ¤ÊÇ·ñ³É¹¦£¬ÔÚgit bashÏÂÊäÈë£º
+####ÎªÁËÑéÖ¤ÊÇ·ñ³É¹¦£¬ÔÚgit bashÏÂÊäÈë£º
 
 ```
 ssh -T git@github.com
@@ -214,7 +213,7 @@ ssh -T git@github.com
 
 
 ###²Ö¿â¹ÜÀí
-²Ö¿âÒ²¾ÍÊÇ½¨Á¢µÄrepository
+####²Ö¿âÒ²¾ÍÊÇ½¨Á¢µÄrepository
 
 ```
 git remote [-v | --verbose]				//ÏÔÊ¾Ô¶³Ì²Ö¿â , -v ±íÊ¾ÊÇ·ñÏÔÊ¾¼òµ¥ÕªÒª
@@ -222,18 +221,18 @@ git remote add origin GithubÍÐ¹ÜµØÖ·	//Ìí¼ÓÔ¶³Ì²Ö¿â£¬ origin ÊÇÄ¬ÈÏµÄÔ¶³Ì²Ö¿â£¬Ì
 ```
 
 
-³¢ÊÔ°Ñ°æ±¾²Ö¿â¿ËÂ¡µ½±¾µØ
+####³¢ÊÔ°Ñ°æ±¾²Ö¿â¿ËÂ¡µ½±¾µØ
 ```
 git clone  ÏîÄ¿µØÖ·
 ```
 
-ÍÆËÍ²Ù×÷
+####ÍÆËÍ²Ù×÷
 ```
 git push -u origin master				//ÍÆËÍ²Ù×÷£¬°Ñ±¾µØ¿âµÄÄÚÈÝÍÆËÍµ½Ô¶³Ì£¬origin ÍÆËÍ²Ö¿âÑ¡Ôñ£¬master ÍÆËÍ·ÖÖ§Ñ¡Ôñ
 ```
 ÓÃgit pushÃüÁî£¬Êµ¼ÊÉÏÊÇ°Ñµ±Ç°·ÖÖ§masterÍÆËÍµ½Ô¶³Ì£¬ÓÉÓÚÔ¶³Ì¿âÊÇ¿ÕµÄ£¬ÎÒÃÇµÚÒ»´ÎÍÆËÍmaster·ÖÖ§Ê±£¬¼ÓÉÏÁË-u²ÎÊý£¬Git²»µ«»á°Ñ±¾µØµÄmaster·ÖÖ§ÄÚÈÝÍÆËÍµÄÔ¶³ÌÐÂµÄmaster·ÖÖ§£¬»¹»á°Ñ±¾µØµÄmaster·ÖÖ§ºÍÔ¶³ÌµÄmaster·ÖÖ§¹ØÁªÆðÀ´£¬ÔÚÒÔºóµÄÍÆËÍ»òÕßÀ­È¡Ê±¾Í¿ÉÒÔ¼ò»¯ÃüÁî¡£
 
-¸üÐÂÄãµÄ±¾µØ²Ö¿âÖÁ×îÐÂ¸Ä¶¯£¬Ö´ÐÐ£º
+####¸üÐÂÄãµÄ±¾µØ²Ö¿âÖÁ×îÐÂ¸Ä¶¯£¬Ö´ÐÐ£º
 ```
 git pull [options] [<repository> [<refspec>¡­?]]
 ```
