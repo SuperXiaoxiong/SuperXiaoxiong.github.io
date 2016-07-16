@@ -1,4 +1,3 @@
-﻿
 ---
 layout: post
 title:  "Github 使用小结"
@@ -23,9 +22,11 @@ tags:  Git GitHub
 * Github以及远程仓库管理的使用
 
 
+
+
 ## Git服务程序的使用
 
-####使用帮助
+使用帮助
 
 ```
 git [<command>] --help
@@ -56,7 +57,7 @@ Git配置信息分为三类：
 
 * 针对于当前仓库数据的配置信息。						工作目录/.git/config
 
-####配置Git运行环境
+配置Git运行环境
 
 ```
 使用git init
@@ -65,13 +66,13 @@ Git配置信息分为三类：
 会在当前目录下生成.git文件
 
 
-####查看当前环境下运行的config信息
+查看当前环境下运行的config信息
 
 ```
 git config --list
 ```
 
-####比较重要的配置有用户名称和电子邮件地址
+比较重要的配置有用户名称和电子邮件地址
 
 ```
 git config --global user.name "用户名"
@@ -82,7 +83,7 @@ git config --global user.email "用户邮箱"
 
 ###Git提交数据
 
-####查看当前工作目录状态
+查看当前工作目录状态
 
 ```
 git status
@@ -98,14 +99,14 @@ git status
 
 * 未跟踪(untracked):还未提交，一般是新建的文件
 
-####将文件提交到暂存区
+将文件提交到暂存区
 
 ```
 git add 文件名		//提交当前文件，可以多个
 git add .           //将当前工作目录内的所有文件都一起添加到暂存区域
 ```
 
-####将暂存区的文件提交到Git版本仓库
+将暂存区的文件提交到Git版本仓库
 
 ```
 git commit -m "提交说明”
@@ -114,7 +115,7 @@ git commit -a -m "Modified again"     //追加-a参数，这样Git会将以前�
 
 ###Git历史数据及其操作
 
-####查看历史记录，看到所有的更新记录（按时间排序，最近更新的会在上面），历史记录会除了保存文件快照，还会详细的记录着文件SHA-1校验和，作者的姓名，邮箱及更新时间，
+查看历史记录，看到所有的更新记录（按时间排序，最近更新的会在上面），历史记录会除了保存文件快照，还会详细的记录着文件SHA-1校验和，作者的姓名，邮箱及更新时间，
 
 ```
 git log
@@ -126,7 +127,7 @@ git log --pretty=oneline  	//--pretty参数，它可以根据不同的格式为�
 ```
 
 
-####还原数据
+还原数据
 
 ```
 git reset [<mode>] [<commit>] 
@@ -134,13 +135,13 @@ git reset [<mode>] [<commit>]
 其中mode 参数 选择 --hard ，所有对跟踪文件的变化都会被放弃
 
 
-####命令来查看所有的历史记录,包括被还原点
+命令来查看所有的历史记录,包括被还原点
 
 ```
 git reflog
 ```
 
-####还原某个文件
+还原某个文件
 ```
 git checkout -- <file>
 ```
@@ -193,7 +194,7 @@ Github以及远程仓库管理的使用分为添加密钥、仓库管理，在�
 
 ###添加密钥
 
-####生成密钥对
+生成密钥对
 ```
 ssh-keygen -t rsa -C "email地址"
 ```
@@ -205,7 +206,7 @@ ssh-keygen -t rsa -C "email地址"
 
 回到github上，进入 Account Settings（账户配置），左边选择SSH Keys，Add SSH Key,title随便填，粘贴在你电脑上生成的key。
 
-####为了验证是否成功，在git bash下输入：
+为了验证是否成功，在git bash下输入：
 
 ```
 ssh -T git@github.com
@@ -215,7 +216,7 @@ ssh -T git@github.com
 
 
 ###仓库管理
-####仓库也就是建立的repository
+仓库也就是建立的repository
 
 ```
 git remote [-v | --verbose]				//显示远程仓库 , -v 表示是否显示简单摘要
@@ -223,18 +224,18 @@ git remote add origin Github托管地址	//添加远程仓库， origin 是默�
 ```
 
 
-####尝试把版本仓库克隆到本地
+尝试把版本仓库克隆到本地
 ```
 git clone  项目地址
 ```
 
-####推送操作
+推送操作
 ```
 git push -u origin master				//推送操作，把本地库的内容推送到远程，origin 推送仓库选择，master 推送分支选择
 ```
 用git push命令，实际上是把当前分支master推送到远程，由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
-####更新你的本地仓库至最新改动，执行：
+更新你的本地仓库至最新改动，执行：
 ```
 git pull [options] [<repository> [<refspec>…?]]
 ```
