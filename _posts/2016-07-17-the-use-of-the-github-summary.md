@@ -39,7 +39,7 @@ Git服务程序的使用分为Git工作流程、Git配置信息、Git提交数�
 
 Git需要把文件提交到Git数据库中来保存数据
 
-![Git工作流程图](../img/2016-07-13-Git的工作流程图.jpg)
+![Git工作流程图](https://github.com/SuperXiaoxiong/SuperXiaoxiong.github.io/blob/master/img/2016-07-13-Git%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 
 * 将修改的文件快照提交到暂存区域
 
@@ -155,6 +155,7 @@ checkout规则是如果暂存区中有该文件，则直接从暂存区恢复，
 ### Git管理标签
 
 关于标签的操作
+
 ```
 git tag 							//查看已有标签
 git tag v<tagname>					//给最近的记录打上标签
@@ -199,6 +200,7 @@ Github以及远程仓库管理的使用分为添加密钥、仓库管理，在�
 ### 添加密钥
 
 生成密钥对
+
 ```
 ssh-keygen -t rsa -C "email地址"
 ```
@@ -231,14 +233,17 @@ git remote add origin Github托管地址	//添加远程仓库， origin 是默�
 
 
 尝试把版本仓库克隆到本地
+
 ```
 git clone  项目地址
 ```
 
 推送操作
+
 ```
 git push -u origin master				//推送操作，把本地库的内容推送到远程，origin 推送仓库选择，master 推送分支选择
 ```
+
 用git push命令，实际上是把当前分支master推送到远程，由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
 更新你的本地仓库至最新改动，执行：
@@ -248,6 +253,12 @@ git pull [options] [<repository> [<refspec>…?]]
 ```
 
 以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动
+
+## 参考
+
+* [红帽Git分布式管理系统-命令详解](http://www.linuxprobe.com/chapter-21.html)
+* [Github 简明教程-使用流程](http://www.runoob.com/w3cnote/git-guide.html)
+* [廖雪峰的官方网站-版本创建和使用](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743256916071d599b3aed534aaab22a0db6c4e07fd0000)
 
 
 
