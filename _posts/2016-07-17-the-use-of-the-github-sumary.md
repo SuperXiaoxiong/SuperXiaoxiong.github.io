@@ -22,6 +22,9 @@ tags:  Git GitHub
 * Github以及远程仓库管理的使用
 
 
+
+
+
 ## Git服务程序的使用
 
 使用帮助
@@ -32,7 +35,7 @@ git [<command>] --help
 
 Git服务程序的使用分为Git工作流程、Git配置信息、Git提交数据、Git历史数据及其操作、Git管理标签
 
-###Git工作流程
+### Git工作流程
 
 Git需要把文件提交到Git数据库中来保存数据
 
@@ -45,7 +48,7 @@ Git需要把文件提交到Git数据库中来保存数据
 * 可以通过下载等方式获取项目文件
 
 
-###Git配置信息
+### Git配置信息
 
 Git配置信息分为三类：
 
@@ -79,7 +82,7 @@ git config --global user.email "用户邮箱"
 
 其中有 --system、 --global、 --local、 --file <filename> 选项，默认是--local：此仓库的本地配置， global对应当前用户， system此系统
 
-###Git提交数据
+### Git提交数据
 
 查看当前工作目录状态
 
@@ -111,7 +114,7 @@ git commit -m "提交说明”
 git commit -a -m "Modified again"     //追加-a参数，这样Git会将以前所有追踪过的文件添加到暂存区后自动的提交，从而跳过了上传暂存区的步骤
 ```
 
-###Git历史数据及其操作
+### Git历史数据及其操作
 
 查看历史记录，看到所有的更新记录（按时间排序，最近更新的会在上面），历史记录会除了保存文件快照，还会详细的记录着文件SHA-1校验和，作者的姓名，邮箱及更新时间，
 
@@ -130,6 +133,7 @@ git log --pretty=oneline  	//--pretty参数，它可以根据不同的格式为�
 ```
 git reset [<mode>] [<commit>] 
 ```
+
 其中mode 参数 选择 --hard ，所有对跟踪文件的变化都会被放弃
 
 
@@ -140,13 +144,15 @@ git reflog
 ```
 
 还原某个文件
+
 ```
 git checkout -- <file>
 ```
+
 checkout规则是如果暂存区中有该文件，则直接从暂存区恢复，如果暂存区没有该文件，则将还原成最近一次文件提交时的快照。
 
 
-###Git管理标签
+### Git管理标签
 
 关于标签的操作
 ```
@@ -158,11 +164,11 @@ git tag -d v1.0   					//删除标签
 ```
 
 
-##Git分支管理
+## Git分支管理
 
 Git分支管理的使用分为Git分支基本操作、Git合并分支、Git解决冲突
 
-###Git分支基本操作
+### Git分支基本操作
 
 ```
 git branch							//列出所有分支，当前的分支前有＊号
@@ -174,7 +180,7 @@ git checkout -b 分支名称			//创建分支并切换到该分支命令
 git branch -d 分支名				//删除该分支
 ```
 
-###Git合并分支
+### Git合并分支
 
 ```
 git merge 分支名				//将指定分支与当前所在分支合并
@@ -186,11 +192,11 @@ git merge 分支名				//将指定分支与当前所在分支合并
 直接查看 冲突文件，可以看到 Git用< <<<<<<，=======，>>>>>>>分割开了各个分支冲突的内容，我们需要手工的删除这些符号，并将内容修改为最终版本。再重新提交
 
 
-##Github以及远程仓库管理的使用
+## Github以及远程仓库管理的使用
 
 Github以及远程仓库管理的使用分为添加密钥、仓库管理，在提交到Github远程仓库保管时，一种是使用账号密码登录，还有一种便是使用RSA密钥登录
 
-###添加密钥
+### 添加密钥
 
 生成密钥对
 ```
@@ -198,6 +204,7 @@ ssh-keygen -t rsa -C "email地址"
 ```
 -t 是指创建密钥类型。 RSA非对称密钥密码体制
 -C 添加注释
+
 要求确认路径和输入密码，我们这使用默认的一路回车就行。成功的话会在~/下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。
 
 生成私钥id_rsa，公钥id_rsa.pub  存储在服务器端
@@ -213,7 +220,8 @@ ssh -T git@github.com
 如果是第一次的会提示是否continue，输入yes就会看到：You've successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。
 
 
-###仓库管理
+### 仓库管理
+
 仓库也就是建立的repository
 
 ```
@@ -234,7 +242,12 @@ git push -u origin master				//推送操作，把本地库的内容推送到远�
 用git push命令，实际上是把当前分支master推送到远程，由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
 更新你的本地仓库至最新改动，执行：
+
 ```
 git pull [options] [<repository> [<refspec>…?]]
 ```
+
 以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动
+
+
+
