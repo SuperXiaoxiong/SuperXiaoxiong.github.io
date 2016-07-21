@@ -25,17 +25,17 @@ tags:  python error exception try-except
 
 ```
 try:
-	try_suite 	# watch for exceptions here 监控这里的异常
+	try_suite 			#监控这里的异常
 except Exception1[, reason]:
-	suite_for_Exception1 	# exception-handling code 异常处理代码
-except Exception2[, reason2]:	# 可以连接多个异常，处理一个try块发生的多种异常
+	suite_for_Exception1 			#异常处理代码
+except Exception2[, reason2]:		#可以连接多个异常，处理一个try块发生的多种异常
 	suite_for_exception_Exception2
 except (Exc3[, Exc4[, ... ExcN]])[, reason]:	# 处理多个异常的 except 语句，放在一个元祖中
 	suite_for_exceptions_Exc3_to_ExcN
 else：
-	no_exceptions_detected_suite	# 在try范围内没有异常被检测到，执行else子句
+	no_exceptions_detected_suite		# 在try范围内没有异常被检测到，执行else子句
 finally：
-	finally_suite 	#无论如何都执行
+	finally_suite 			#无论如何都执行
 ```
 
 ## 异常参数
@@ -65,18 +65,18 @@ SomeExcpetion,是触发异常的名字.如果有,它必须是一个字符串,类
 raise 语法
 
 ```
-raise exclass 					# 触发一个异常,从 exclass 生成一个实例(不含任何异常参数)
-raise exclass() 				# 同上,除了现在不是类;通过函数调用操作符(function calloperator:"()")作用于类名生成一个新的 exclass 实例,同样也没有异常参数
-raise exclass, args 			#同上,但同时提供的异常参数 args,可以是一个参数也可以元组
+raise exclass 			#触发一个异常,从 exclass 生成一个实例(不含任何异常参数)
+raise exclass() 		#同上,除了现在不是类;通过函数调用操作符(function calloperator:"()")作用于类名生成一个新的 exclass 实例,同样也没有异常参数
+raise exclass, args 		#同上,但同时提供的异常参数 args,可以是一个参数也可以元组
 raise exclass(args) 			#同上
 raise exclass,args, tb 			#同上,但提供一个追踪(traceback)对象 tb 供使用
 raise exclass,instance 			#通过实例触发异常(通常是 exclass 的实例);如果实例是 exclass的子类实例,那么这个新异常的类型会是子类的类型(而不是exclass);如果实例既不是 exclass 的实例也不是 exclass 子类的实例,那么会复制此实例为异常参数去生成一个新的 exclass 实例.
-raise instance 					#通过实例触发异常:异常类型是实例的类型;等价于raise
+raise instance 			#通过实例触发异常:异常类型是实例的类型;等价于raise
 instance.__class__, instance (同上).
 raise string 					#(过时的) 触发字符串异常
 raise string, args 				#同上,但触发伴随着 args
 raise string, args, tb 			#同上,但提供了一个追踪(traceback)对象 tb 供使用
-raise 							#(1.5 新增)重新触发前一个异常,如果之前没有异常,触发 TypeError.
+raise 				#(1.5 新增)重新触发前一个异常,如果之前没有异常,触发 TypeError.
 ```
 
 ## 断言
