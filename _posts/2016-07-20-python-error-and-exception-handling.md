@@ -25,17 +25,17 @@ tags:  python error exception try-except
 
 ```
 try:
-	try_suite 							# watch for exceptions here 监控这里的异常
+	try_suite 	# watch for exceptions here 监控这里的异常
 except Exception1[, reason]:
-	suite_for_Exception1 				# exception-handling code 异常处理代码
-except Exception2[, reason2]:						# 可以连接多个异常，处理一个try块发生的多种异常
+	suite_for_Exception1 	# exception-handling code 异常处理代码
+except Exception2[, reason2]:	# 可以连接多个异常，处理一个try块发生的多种异常
 	suite_for_exception_Exception2
-except (Exc3[, Exc4[, ... ExcN]])[, reason]:		# 处理多个异常的 except 语句，放在一个元祖中
+except (Exc3[, Exc4[, ... ExcN]])[, reason]:	# 处理多个异常的 except 语句，放在一个元祖中
 	suite_for_exceptions_Exc3_to_ExcN
 else：
-	no_exceptions_detected_suite					# 在try范围内没有异常被检测到，执行else子句
+	no_exceptions_detected_suite	# 在try范围内没有异常被检测到，执行else子句
 finally：
-	finally_suite 						#无论如何都执行
+	finally_suite 	#无论如何都执行
 ```
 
 ## 异常参数
@@ -44,9 +44,9 @@ finally：
 
 reason 只包含一个字符串或是由错误编号和字符串组成的元组, 调用 str(reason) 总会返回一个良好可读的错误原因.
  
-reason 是一个类实例 - 这样做你其实是调用类的特殊方法 __str__() .
+reason 是一个类实例 - 这样做你其实是调用类的特殊方法```__str__()``` .
 
-为了获得更多的关于异常的信息,我们可以调用该实例的 __class__ 属性,它标示了实例是从什么类实例化而来. 类对象也有属性, 比如文档字符串(documentation string)reason.__class__.__doc__和进一步阐明错误类型的名称字符串reason.__class__.__name__
+为了获得更多的关于异常的信息,我们可以调用该实例的 __class__ 属性,它标示了实例是从什么类实例化而来. 类对象也有属性, 比如文档字符串(documentation string)```reason.__class__.__doc__```和进一步阐明错误类型的名称字符串```reason.__class__.__name__```
 
 ## 触发异常
 
@@ -159,13 +159,13 @@ BaseException　　　　　　　　　　　　　　所有异常基类
            +-- DeprecationWarning　　　　　　关于被启用的特征的警告
            +-- PendingDeprecationWarning　　关于构造将来语义会有改变的警告
            +-- RuntimeWarning 　　　　　　　 可疑的运行时行为的警告
-         +-- SyntaxWarning　　　　　　　可疑的语言的警告　　
+           +-- SyntaxWarning　　　　　　　可疑的语言的警告　　
            +-- UserWarning　　　　　　　　用户代码生成警告
            +-- FutureWarning
-	   +-- ImportWarning　　　　　　导入模块/对象警告
-	   +-- UnicodeWarning　　　　　　Unicode警告
-	   +-- BytesWarning　　　　　　　Bytes警告
-　　　　　　 +-- Overflow Warning　　　　　　旧的关于自动提升为长整型(long)的警告
+	       +-- ImportWarning　　　　　　导入模块/对象警告
+	       +-- UnicodeWarning　　　　　　Unicode警告
+	       +-- BytesWarning　　　　　　　Bytes警告
+　　　 	   +-- Overflow Warning　　　　　　旧的关于自动提升为长整型(long)的警告
  
 ```
 
@@ -222,3 +222,6 @@ could not convert string to float: happy
 * exc_value: 异常类的实例
 * exc_traceback: 追踪(traceback)对象
 
+## 参考
+* python核心编程第二版
+* [Python3.4.3 入门指南](http://www.kancloud.cn/thinkphp/python-tutorial/37770)
