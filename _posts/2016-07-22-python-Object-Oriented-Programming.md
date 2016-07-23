@@ -172,6 +172,7 @@ class NewAddrBookEntry(object): 	# 类定义
 		self.phone = Phone(ph) 	# 创建 Phone 实例
 		print 'Created instance for:', self.name
 ```
+
 NewAddrBookEntry 类由它自身和其它类组合而成。这就在一个类和其它组成类之间定义了一种"has-a/有一个"的关系。 比如NewAddrBookEntry类"有一个"Name 类实例和一个 Phone实例。
 
 ### 子类和派生
@@ -186,7 +187,7 @@ class SubClassName (ParentClass1[, ParentClass2, ...]):
 
 ### 继承
 
-```__bases__类属性```它是一个包含其父类（parent）的集合的元组。
+类属性```__bases__```它是一个包含其父类（parent）的集合的元组。
 
 子类重新定义和父类相同的方法，可以对父类方法进行覆盖
 
@@ -197,11 +198,11 @@ class SubClassName (ParentClass1[, ParentClass2, ...]):
 ```
 >>> class P(object):
 ...     def foo(self):
-...             print 'this is P_foo()'
+...         print 'this is P_foo()'
 ...
 >>> class C(P):
 ...     def foo(self):
-...             print 'this is C_foo()'
+...         print 'this is C_foo()'
 ...
 >>> c = C()
 >>> P.foo(c)
@@ -291,7 +292,7 @@ dir(): 作用在实例上时，显示实例变量，还有实例所在的类及�
 
 #### super()
 
-super(type[,obj]) 函数：帮助找出相应的父类，然后方便调用相关的属性；super(MyClass,self).__init__()。
+super(type[,obj]) 函数：帮助找出相应的父类，然后方便调用相关的属性；```super(MyClass,self).__init__()```。
 
 #### var()
 
@@ -300,4 +301,4 @@ var()函数：与dir()类似。
 ## 参考
 * python核心编程第二版
 * [python笔记](http://www.cnblogs.com/NNUF/archive/2013/01/28/2880451.html)
-* [__new__()和__init__()区别]（http://www.cnblogs.com/tuzkee/p/3540293.html）
+* [new()和init()区别]（http://www.cnblogs.com/tuzkee/p/3540293.html）
