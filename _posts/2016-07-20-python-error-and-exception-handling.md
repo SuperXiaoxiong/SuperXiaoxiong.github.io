@@ -162,10 +162,10 @@ BaseException　　　　　　　　　　　　　　所有异常基类
            +-- SyntaxWarning　　　　　　　可疑的语言的警告　　
            +-- UserWarning　　　　　　　　用户代码生成警告
            +-- FutureWarning
-	       +-- ImportWarning　　　　　　导入模块/对象警告
-	       +-- UnicodeWarning　　　　　　Unicode警告
-	       +-- BytesWarning　　　　　　　Bytes警告
-　　　 	   +-- Overflow Warning　　　　　　旧的关于自动提升为长整型(long)的警告
+           +-- ImportWarning　　　　　　　　导入模块/对象警告
+           +-- UnicodeWarning　　　　　　　　Unicode警告
+           +-- BytesWarning　　　　　　　　Bytes警告
+           +-- Overflow Warning　　　　　　旧的关于自动提升为长整型(long)的警告
  
 ```
 
