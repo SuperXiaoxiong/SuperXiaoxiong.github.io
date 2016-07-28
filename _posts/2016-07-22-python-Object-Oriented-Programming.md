@@ -301,4 +301,4 @@ var()函数：与dir()类似。
 ## 参考
 * python核心编程第二版
 * [python笔记](http://www.cnblogs.com/NNUF/archive/2013/01/28/2880451.html)
-* [new()和init()区别]（http://www.cnblogs.com/tuzkee/p/3540293.html）
+* [new()和init()区别](http://www.cnblogs.com/tuzkee/p/3540293.html)
