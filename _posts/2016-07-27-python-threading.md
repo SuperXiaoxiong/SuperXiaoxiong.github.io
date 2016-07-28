@@ -15,6 +15,9 @@ python代码执行由python虚拟机(解释器主循环)来控制，python虚拟
 
 python中有Thread和Threading等模块支持线程，Thread模块比较偏底层，本文对于Threading模块进行讲解。
 
+
+
+
 ## Threading模块介绍
 
 python的threading模块是对thread进行了二次封装，提供了更加便捷的API。经常和Queue结合使用,Queue模块中提供了同步的、线程安全的队列类，包括FIFO（先入先出)队列Queue，LIFO（后入先出）队列LifoQueue，和优先级队列PriorityQueue。这些队列都实现了锁原语，能够在多线程中直接使用。可以使用队列来实现线程间的同步
@@ -37,17 +40,11 @@ Threading的Thread类是主要的运行对象
 ```
 class threading.Thread(group=None, target=None, name=None, args=(), kwargs={})
 应该始终以关键字参数调用该构造函数。参数有：
-
 group应该为None；被保留用于未来实现了ThreadGroup类时的扩展。
-
 target是将被run()方法调用的可调用对象。默认为None，表示不调用任何东西。
-
 name是线程的名字。默认情况下，以“Thread-N”的形式构造一个唯一的名字，N是一个小的十进制整数。
-
 args是给调用目标的参数元组。默认为()。
-
 kwargs是给调用目标的关键字参数的一个字典。默认为{}。
-
 如果子类覆盖该构造函数，它必须保证在对线程做任何事之前调用基类的构造函数(Thread.__init__())
 ```
 
@@ -55,7 +52,6 @@ kwargs是给调用目标的关键字参数的一个字典。默认为{}。
 
 ```
 start()             开始线程的执行,在相同的线程对象上调用该方法多次将引发一个RuntimeError
-
 run()               定义线程的功能的函数(一般子类重写)
 join(timeout=None)  程序挂起，直到线程结束，time不为None，表示最多挂起时间
 getName()           返回线程的名字
@@ -70,7 +66,7 @@ ident               线程的ID，如果线程还未启动则为None。它是一
 
 守护线程：主线程退出，但子线程不会被强行退出(尤其是子线程还在活动时)，守护线程一般是一个等待客户请求的服务器，如果没有客户提出退出，就不会退出
 
-在线程start之前，设置daemon属性thread.setDaemon(True)，就表示主线程要退出时，不用等待子线程结束，也不会强制结束子线程。默认Daemon属性是false，也可以显示调用thread.setDaemon(False)
+在线程```start```之前，设置```daemon```属性```thread.setDaemon(True)```，就表示主线程要退出时，不用等待子线程结束，也不会强制结束子线程。默认```Daemo```n属性是false，也可以显示调用```thread.setDaemon(False)```
 
 #### 创建线程的两种主要方式方式
 
@@ -82,6 +78,7 @@ ident               线程的ID，如果线程还未启动则为None。它是一
 #### 创建一个Thread实例，传入函数
 
 创建两个线程，线程0运行4秒（sleep），线程1运行2秒。loop函数是执行的函数体，通过```threading.Thread(target = loop, args = (i, loops[i]))```,在Thread实例中，传入loop函数。
+
 ```
 import threading
 from time import ctime, sleep
@@ -115,9 +112,9 @@ if __name__ == '__main__':
         main()
 ```
 
-所有的线程都创建了之后，再一起调用 start()函数启动。
+所有的线程都创建了之后，再一起调用```start()```函数启动。
 
-join()会等到线程结束，或者在给了 timeout 参数的时候，等到超时为止。此实例为主线程调用了创建的线程0,1的join方法，所以需要等待线程0,1一直退出。
+```join()```会等到线程结束，或者在给了```timeout```参数的时候，等到超时为止。此实例为主线程调用了创建的线程0,1的```join()```方法，所以需要等待线程0,1一直退出。
 
 ```
 start at: Thu Jul 28 09:31:34 2016
@@ -132,7 +129,7 @@ all Done at Thu Jul 28 09:31:38 2016
 
 #### 从Thread派生出一个子类，创建这个子类的实例
 
-这是目前比较常用的方法，创建一个新的class，把线程执行的代码放到class里，只覆盖该类的__init__()和run()方法
+这是目前比较常用的方法，创建一个新的class，把线程执行的代码放到class里，只覆盖该类的```__init__()```和```run()```方法
 
 ```
 import threading
@@ -183,9 +180,9 @@ if __name__ == '__main__':
 
 重写父类run方法，在线程启动后执行该方法内的代码。
 
-apply(func [, args [, kwargs ]]) 函数用于当函数参数已经存在于一个元组或字典中时，间接地调用函数。args是一个包含将要提供给函数的按位置传递的参数的元组。如果省略了args，任何参数都不会被传递，kwargs是一个包含关键字参数的字典。
+```apply(func [, args [, kwargs ]]) ```函数用于当函数参数已经存在于一个元组或字典中时，间接地调用函数。args是一个包含将要提供给函数的按位置传递的参数的元组。如果省略了args，任何参数都不会被传递，kwargs是一个包含关键字参数的字典。
  
-apply()的返回值就是func()的返回值，apply()的元素参数是有序的，元素的顺序必须和func()形式参数的顺序一致
+```apply()```的返回值就是```func()```的返回值，```apply()```的元素参数是有序的，元素的顺序必须和```func()```形式参数的顺序一致
 
 ### Lock对象
 
@@ -195,12 +192,13 @@ apply()的返回值就是func()的返回值，apply()的元素参数是有序的
 
 锁有两个基本方法```acquire()```和```release()```。
 
-1. 当状态是unlocked时，acquire()改变该状态为locked并立即返回。
-2. 当状态是locked时，acquire()将阻塞直至在另外一个线程中调用release()来将它变为unlocked，然后acquire()调用将它重置为locked并返回
-3. release()方法应该只在locked状态下调用；它改变状态为unlocked并立即返回。
+1. 当状态是unlocked时，```acquire()```改变该状态为locked并立即返回。
+2. 当状态是locked时，```acquire()```将阻塞直至在另外一个线程中调用```release()```来将它变为unlocked，然后```acquire()```调用将它重置为locked并返回
+3. ```release()```方法应该只在locked状态下调用；它改变状态为unlocked并立即返回。
 4. 如果尝试释放一个unlocked的锁，将引发一个ThreadError。
 
 使用实例
+	
 ```
 import threading
 lock = threading.Lock()	#Lock对象
@@ -218,6 +216,7 @@ Lock.acquire([blocking])
 2. 如果设置为False，当阻塞存在是直接返回False，没有阻塞时locked并返回True
 
 在已经加了一把锁的情况下
+
 ```
 lock.acquire(True)  
 # 等待，要等待lock被释放掉，如果在同一线程就会生成死锁
@@ -255,8 +254,6 @@ True
 这两种琐的主要区别是：RLock允许在同一线程中被多次acquire。而Lock却不允许这种情况。注意：如果使用RLock，那么acquire和release必须成对出现，即调用了n次acquire，必须调用n次的release才能真正释放所占用的琐。
 
 ### Condition
-
-TODO:
 
 Condiftion被称为条件变量，它提供了比Lock, RLock更高级的功能，允许我们能够控制复杂的线程同步问题。
 
@@ -336,6 +333,7 @@ def test():
 if __name__ == '__main__':
     test()
 ```
+
 ### Semaphore/BoundedSemaphore
 
 Semaphore（信号量），同步指令。Semaphore管理一个内置的计数器，每当调用acquire()时-1，调用release() 时+1。计数器不能小于0；当计数器为0时，acquire()将阻塞线程至同步锁定状态，直到其他线程调用release()。
@@ -346,19 +344,23 @@ BoundedSemaphore 与Semaphore的唯一区别在于前者将在调用release()时
 
 构造方法： 
 
-```Semaphore(value=1)```
+```
+Semaphore(value=1)
+```
 
- value是计数器的初始值。
+value是计数器的初始值。
 
 实例方法：
  
-```acquire([timeout])```
+```
+acquire([timeout])
+```
 
- 请求Semaphore。如果计数器为0，将阻塞线程至同步阻塞状态；否则将计数器-1并立即返回。 
+请求Semaphore。如果计数器为0，将阻塞线程至同步阻塞状态；否则将计数器-1并立即返回。 
 
 ```release()```
 
- 释放Semaphore，将计数器+1，如果使用BoundedSemaphore，还将进行释放次数检查。release()方法不检查线程是否已获得 Semaphore。
+释放Semaphore，将计数器+1，如果使用BoundedSemaphore，还将进行释放次数检查。release()方法不检查线程是否已获得 Semaphore。
 
 ```
 # encoding: UTF-8
@@ -407,13 +409,16 @@ Event（事件）是最简单的线程通信机制之一：一个线程通知事
 Event其实就是一个简化版的 Condition。Event没有锁，无法使线程进入同步阻塞状态。
 
 构造方法： 
+
+```
 Event()
+```
 
 实例方法： 
-isSet(): 当内置标志为True时返回True。 
-set(): 将标志设为True，并通知所有处于等待阻塞状态的线程恢复运行状态。 
-clear(): 将标志设为False。 
-wait([timeout]): 如果标志为True将立即返回，否则阻塞线程至等待阻塞状态，等待其他线程调用set()。
+ ```isSet()```: 当内置标志为True时返回True。 
+ ```set()```: 将标志设为True，并通知所有处于等待阻塞状态的线程恢复运行状态。 
+ ```clear()```: 将标志设为False。 
+ ```wait([timeout])```: 如果标志为True将立即返回，否则阻塞线程至等待阻塞状态，等待其他线程调用set()。
 
 ```
 # encoding: UTF-8
@@ -462,17 +467,18 @@ def hello():
 t = threading.Timer(3, hello)
 t.start()    #    3秒钟之后执行hello函数。
 ```
+
 这个类表示一个动作应该在一个特定的时间之后运行 — 也就是一个计时器。Timer是Thread的子类， 因此也可以使用函数创建自定义线程
 
 Timers通过调用它们的start()方法作为线程启动。timer可以通过调用cancel()方法（在它的动作开始之前）停止。timer在执行它的动作之前等待的时间间隔可能与用户指定的时间间隔不完全相同。
 
 #### 常用函数
 
-threading.currentThread(): 返回当前的线程变量。 
+ ```threading.currentThread()```: 返回当前的线程变量。 
 
-threading.enumerate(): 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。
+ ```threading.enumerate()```: 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。
  
-threading.activeCount(): 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。
+ ```threading.activeCount()```: 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。
 
 
 ### ThreadLocal
@@ -511,7 +517,7 @@ ThreadLocal最常用的地方就是为每个线程绑定一个数据库连接，
 
 ## 线程优先级队列（Queue）
 
-Python的Queue模块中提供了同步的、线程安全的队列类，包括FIFO（先入先出)队列Queue，LIFO（后入先出）队列LifoQueue，和优先级队列PriorityQueue。这些队列都实现了锁原语，能够在多线程中直接使用。可以使用队列来实现线程间的同步。
+Python的Queue模块中提供了同步的、线程安全的队列类，包括FIFO（先入先出)队列Queue，LIFO（后入先出）队列LifoQueue，和优先级队列PriorityQueue。这些队列都实现了锁原语，能够在多线程中直接使用。可以使用队列来实现线程间的同步。例子是confition条件变量中的消费者生产者的例子
 
 ```
 #encoding=utf-8
