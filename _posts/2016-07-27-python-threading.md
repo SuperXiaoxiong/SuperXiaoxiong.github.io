@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
 所有的线程都创建了之后，再一起调用```start()```函数启动。
 
-```join()```会等到线程结束，或者在给了```timeout```参数的时候，等到超时为止。此实例为主线程调用了创建的线程0,1的```join()```方法，所以需要等待线程0,1一直退出。
+ ```join()```会等到线程结束，或者在给了```timeout```参数的时候，等到超时为止。此实例为主线程调用了创建的线程0,1的```join()```方法，所以需要等待线程0,1一直退出。
 
 ```
 start at: Thu Jul 28 09:31:34 2016
@@ -180,9 +180,9 @@ if __name__ == '__main__':
 
 重写父类run方法，在线程启动后执行该方法内的代码。
 
-```apply(func [, args [, kwargs ]]) ```函数用于当函数参数已经存在于一个元组或字典中时，间接地调用函数。args是一个包含将要提供给函数的按位置传递的参数的元组。如果省略了args，任何参数都不会被传递，kwargs是一个包含关键字参数的字典。
+ ```apply(func [, args [, kwargs ]]) ```函数用于当函数参数已经存在于一个元组或字典中时，间接地调用函数。args是一个包含将要提供给函数的按位置传递的参数的元组。如果省略了args，任何参数都不会被传递，kwargs是一个包含关键字参数的字典。
  
-```apply()```的返回值就是```func()```的返回值，```apply()```的元素参数是有序的，元素的顺序必须和```func()```形式参数的顺序一致
+ ```apply()```的返回值就是```func()```的返回值，```apply()```的元素参数是有序的，元素的顺序必须和```func()```形式参数的顺序一致
 
 ### Lock对象
 
@@ -194,7 +194,7 @@ if __name__ == '__main__':
 
 1. 当状态是unlocked时，```acquire()```改变该状态为locked并立即返回。
 2. 当状态是locked时，```acquire()```将阻塞直至在另外一个线程中调用```release()```来将它变为unlocked，然后```acquire()```调用将它重置为locked并返回
-3. ```release()```方法应该只在locked状态下调用；它改变状态为unlocked并立即返回。
+3.  ```release()```方法应该只在locked状态下调用；它改变状态为unlocked并立即返回。
 4. 如果尝试释放一个unlocked的锁，将引发一个ThreadError。
 
 使用实例
@@ -358,7 +358,9 @@ acquire([timeout])
 
 请求Semaphore。如果计数器为0，将阻塞线程至同步阻塞状态；否则将计数器-1并立即返回。 
 
-```release()```
+```
+release()
+```
 
 释放Semaphore，将计数器+1，如果使用BoundedSemaphore，还将进行释放次数检查。release()方法不检查线程是否已获得 Semaphore。
 
@@ -415,10 +417,10 @@ Event()
 ```
 
 实例方法： 
- ```isSet()```: 当内置标志为True时返回True。 
- ```set()```: 将标志设为True，并通知所有处于等待阻塞状态的线程恢复运行状态。 
- ```clear()```: 将标志设为False。 
- ```wait([timeout])```: 如果标志为True将立即返回，否则阻塞线程至等待阻塞状态，等待其他线程调用set()。
+1.  ```isSet()```: 当内置标志为True时返回True。 
+2.  ```set()```: 将标志设为True，并通知所有处于等待阻塞状态的线程恢复运行状态。 
+3.  ```clear()```: 将标志设为False。 
+4.  ```wait([timeout])```: 如果标志为True将立即返回，否则阻塞线程至等待阻塞状态，等待其他线程调用set()。
 
 ```
 # encoding: UTF-8
@@ -570,10 +572,10 @@ if __name__ == '__main__':
 
 ## 参考
 python核心编程第二版
-[Python爬虫(四)--多线程](http://www.jianshu.com/p/86b8e78c418a)
-[python2.78中文官方文档多线程](http://python.usyiyi.cn/python_278/library/threading.html#thread-objects)
-[python线程AstralWind博客](http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html)
-[python多线程编程(5): 条件变量同步](http://www.cnblogs.com/holbrook/archive/2012/03/13/2394811.html)
-[Python模块学习：threading 多线程控制和处理](http://python.jobbole.com/81546/)
-[w3school-python多线程](https://wizardforcel.gitbooks.io/w3school-python/content/28.html)
-[廖雪峰python学习](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386832360548a6491f20c62d427287739fcfa5d5be1f000)
+* [Python爬虫(四)--多线程](http://www.jianshu.com/p/86b8e78c418a)
+* [python2.78中文官方文档多线程](http://python.usyiyi.cn/python_278/library/threading.html#thread-objects)
+* [python线程AstralWind博客](http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html)
+* [python多线程编程(5): 条件变量同步](http://www.cnblogs.com/holbrook/archive/2012/03/13/2394811.html)
+* [Python模块学习：threading 多线程控制和处理](http://python.jobbole.com/81546/)
+* [w3school-python多线程](https://wizardforcel.gitbooks.io/w3school-python/content/28.html)
+* [廖雪峰python学习](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386832360548a6491f20c62d427287739fcfa5d5be1f000)
