@@ -579,7 +579,7 @@ if __name__ == '__main__':
 ```
 
 ## 参考
-python核心编程第二版
+* python核心编程第二版
 * [Python爬虫(四)--多线程](http://www.jianshu.com/p/86b8e78c418a)
 * [python2.78中文官方文档多线程](http://python.usyiyi.cn/python_278/library/threading.html#thread-objects)
 * [python线程AstralWind博客](http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html)
