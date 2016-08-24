@@ -60,7 +60,7 @@ urllib.urlretrieve(url[, filename[, reporthook[, data]]])
 ```
 import urllib
 
-def cbk(a, b, c):
+def reporthook(a, b, c):
     '''回调函数
     @a: 已经下载的数据块
     @b: 数据块的大小
@@ -70,15 +70,16 @@ def cbk(a, b, c):
     if per > 100:
         per = 100
     print '%.2f%%' % per
+	//如果在格式化字符串中要输出百分号，则需要使用 %%
 
 url = 'http://www.sina.com.cn'
 local = 'd://sina.html'
-urllib.urlretrieve(url, local, cbk)
+urllib.urlretrieve(url, local, reporthook)
 ```
 
 回调函数的使用
 
-TODO
+reporthook(blocknum, bs, size)，默认下载1024*8字节回调一次，也就是bs大小，blocknum是块数量,已经下载的数据块数量，其实就是回调的次数，size是下载文件总大小，
 
 ### 编码
 
@@ -101,6 +102,8 @@ urllib.unquote(url)
 urllib.quote_plus(string[, safe])
 urllib.unquote_plus(string)
 ```
+
+一般情况下quote用于GET方式中对于url的编码，而quote用于post方式对data的编码
 
 #### urlencode
 
