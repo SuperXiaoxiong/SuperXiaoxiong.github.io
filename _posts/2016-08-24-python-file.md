@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "python pool原理和使用"
+title:  "python 文件操作"
 date:   2016-08-23 23:20:44
 categories: python
-tags:  python  pool
+tags:  python  file
 ---
 
 * content

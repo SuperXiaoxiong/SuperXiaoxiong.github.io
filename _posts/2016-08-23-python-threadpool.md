@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "python pool原理和使用"
-date:   2016-08-23 23:20:44
+title:  "python 线程池原理和使用"
+date:   2016-08-25 12:13:05
 categories: python
 tags:  python  pool
 ---
