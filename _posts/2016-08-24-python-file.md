@@ -110,13 +110,53 @@ os.SEEK_END(2):  相对文件结束位置
 
 ```file.tell()```，返回文件当前的偏移
 
+## 常用文件属性
+
+```
+file.fileno()  文件描述符
+file.mode      文件打开权限
+file.encoding  文件编码格式
+file.closed    文件是否关闭
+```
+
+### python 标准文件
+
+sys模块中
+
+文件标准输入:sys.stdin
+
+文件标准输出:sys.stdout
+
+文件标准错误:sys.stderr
+
+### 系统命令行参数
+
+sys.argv 是一个命令行参数的列表。
+
+sys.argv[0]表示代码本身文件路径，所以参数从1开始
+
+### 中文编码
+
+1.将unicode转换成utf-8
+
+```
+a = unicode.encode(u'汉字','utf-8')
+```
+
+2.创建codecs模块创建指定编码格式文件
+
+```
+open(fname,mode,encoding,errors,buffering)
+```
+
+使用指定编码格式打开文件
+
 ## TODO
 
 只是简单的对文件操作的常用部分做了简介，列一个关于文件操作的TODO列表
 
-1. 文件属性
-2. 目录操作
-3. 各种注意点
+1. 目录操作
+2. 各种注意点
 
 ## 参考
 1. imooc python学习 
