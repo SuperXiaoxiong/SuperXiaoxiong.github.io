@@ -100,9 +100,11 @@ StreamHandler将日志输出发送到```sys.stdout```, ```sys.stderr```这样的
 
  默认为追加方式打开文件
 
-####　RotatingFileHandler和TimedRotatingFileHandler
+#### RotatingFileHandler和TimedRotatingFileHandler
 
- ```logging.handlers.RotatingFileHandler(filename, mode='a', maxBytes=0, backupCount=0, encoding=None, delay=0)```
+```
+logging.handlers.RotatingFileHandler(filename, mode='a', maxBytes=0, backupCount=0, encoding=None, delay=0)
+```
 
 以文件大小为阈值，改名并重建新的日志文件，
 
@@ -112,7 +114,9 @@ StreamHandler将日志输出发送到```sys.stdout```, ```sys.stderr```这样的
 
  ```backupCount```只保存指定数量的日志，会覆盖前面的日志 #TODO
 
- ```logging.handlers.TimedRotatingFileHandler(filename, when='h', interval=1, backupCount=0, encoding=None, delay=False, utc=False)```
+```
+logging.handlers.TimedRotatingFileHandler(filename, when='h', interval=1, backupCount=0, encoding=None, delay=False, utc=False)
+```
   
  间隔一定时间创建日志
  
@@ -228,7 +232,7 @@ handlers=handler0
 
  ```level```可以是```DEBUG```,```INFO```,```WARNING```,```ERROR```,```CRITICAL```或```NOTSET```其中之一。```NOTSET```表示所有的消息都要记录，这只对根```logger```有效
 
-对于非根```logger```的```logger```来说，需要一些额外的信息。
+对于非根```logger```来说，需要一些额外的信息。
 
 ```
 [logger_log1]
@@ -270,7 +274,7 @@ logging.config.fileConfig('./logging_emp.conf')
 
 ## 参考
 
-[python指南](http://pythonguidecn.readthedocs.io/zh/latest/writing/logging.html)
-[python官方中文文档](http://python.usyiyi.cn/documents/python_278/library/logging.config.html#logging-config-api)
-[python logging模块使用教程_好吃的野菜](http://www.jianshu.com/p/feb86c06c4f4)
-[python log 老鱼的博客](http://hgoldfish.com/blogs/article/7/)
+* [python指南](http://pythonguidecn.readthedocs.io/zh/latest/writing/logging.html)
+* [python官方中文文档](http://python.usyiyi.cn/documents/python_278/library/logging.config.html#logging-config-api)
+* [python logging模块使用教程_好吃的野菜](http://www.jianshu.com/p/feb86c06c4f4)
+* [python log 老鱼的博客](http://hgoldfish.com/blogs/article/7/)
