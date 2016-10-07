@@ -84,8 +84,8 @@ UnicodeDecodeError: 'utf8' codec can't decode byte 0xd6 in position 0: invalid c
 
 ## 漂亮的输出
 
-1. 用```pprint()```代替```print```输出
-2. 添加indent参数```json.dumps(data, indent=4)```
+1. 用```pprint()```代替```print```输出,输出json
+2. 添加indent参数,输出python对象```json.dumps(data, indent=4, ensure_ascii=False)```
 
 ## 参考
 
