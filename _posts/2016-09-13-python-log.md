@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "python 日志"
 date: 2016-09-13 22:21:00
