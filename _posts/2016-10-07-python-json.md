@@ -21,7 +21,7 @@ python2 json的学习和使用
 
 在```python```中自带有```json```的处理模块，只需要```import json```就行
 
-在```json```数据中```false```和```true```会转化为```False```, ```True```; ```null```为转为```None```
+在```json```数据中```false```和```true```对应python中的```False```, ```True```; ```null```对应python中的```None```
 
 
 ### 基本使用
