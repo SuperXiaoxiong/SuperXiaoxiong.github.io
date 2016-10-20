@@ -193,14 +193,16 @@ logging.handlers.DatagramHandler
 ```
 import logging
 
+formatter = logging.Formatter('%(asctime)s %(filename)s %(name)s %(message)s ' )
 
->>> logger = logging.getLogger('test_logger')
->>> sh = logging.StreamHandler(stream=None)
->>> sh.setLevel(logging.INFO)
->>> formatter = logging.Formatter('%(asctime)s %(filename)s %(name)s %(message)s ' )
->>> sh.setFormatter(formatter)
->>> logger.addHandler(sh)
->>> logger.warning("warning !")
+sh = logging.StreamHandler(stream=None)
+sh.setLevel(logging.INFO)
+sh.setFormatter(formatter)
+
+logger = logging.getLogger('test_logger')
+logger.setLevel(logging.INFO)
+logger.addHandler(sh)
+logger.warning("warning !")
 
 2016-09-14 22:20:39,693 <stdin> test_logger warning !
 ```
