@@ -64,7 +64,7 @@ isinstance(u'中文', str) //判断编码方式
 <type 'str'>
 ```
 
-可以看到从命令行输入的是```str```类型，所以在使用的时候按照原则需要转换成```unicode```编码，使用```s.decode('sys.stdin.encoding')```,转换成```unicode```编码,```sys.stdin.encoding```是读取当前环境的编码
+可以看到从命令行输入的是```str```类型，所以在使用的时候按照原则需要转换成```unicode```编码，使用```s.decode(sys.stdin.encoding)```,转换成```unicode```编码,```sys.stdin.encoding```是读取当前环境的编码
 
 ```
 >>> import sys
@@ -102,7 +102,7 @@ info = codecs.open(file,'w','utf-8')
 
 ### 命令行输出
 
- ```sys.stdin.encoding```和```sys.stdout.encoding```是标准输入输出sdtin，stdout输入输出使用的编码，包命令行参数和print输出，由locale环境变量决定，所以一般print输出不需要将```Unicode```编码encoding```。```sys.getdefaultencoding()```文件读写和字符串处理等操作使用的默认编码
+ ```sys.stdin.encoding```和```sys.stdout.encoding```是标准输入输出sdtin，stdout输入输出使用的编码，包命令行参数和print输出，由locale环境变量决定，所以一般print输出不需要将```Unicode```编码```encoding```。```sys.getdefaultencoding()```文件读写和字符串处理等操作使用的默认编码
 
 ```
 >>> print sys.stdin.encoding
