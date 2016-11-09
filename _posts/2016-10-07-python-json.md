@@ -21,8 +21,37 @@ python2 json的学习和使用
 
 在```python```中自带有```json```的处理模块，只需要```import json```就行
 
+
+ ```Python```和```Json```转换表
+
+Python 转 Json
+
+|     Python     |     JSON     |
+|:---------------|:-------------|
+|dict            |object        |
+|list, tuple     |array         |
+|str, unicode    |string        |
+|int, long, float|number        |
+|True            |true          |
+|False           |false         |
+|None            |null          |
+
+JSON 转 Python
+|     JSON       |    Python    |
+|:---------------|:-------------|
+|object          |dict          |
+|array           |list          |
+|string          |unicode       |
+|number(int)     |int, long     |
+|number(real)    |float         |
+|true            |True          |
+|false           |False         |
+|null            |None          |
+
+
 在```json```数据中```false```和```true```对应python中的```False```, ```True```; ```null```对应python中的```None```
 
+注意:通过表可以看见在转换的时候```tuple```会转换成```array```，并且在通过```load```方式也只会转换成```list```，对于```str```编码都会转换成```unicode```,如果使用则需要在使用前添加适当处理
 
 ### 基本使用
 
@@ -45,6 +74,8 @@ json.dump(data,file)     #生成json类文件对象
 json.loads(str)    #解析json字符串
 json.load(file)    #解析json类文件对象
 ```
+
+注意在使用```loads```方法时，若```str```为空会报错。
 
 ### json中unicode使用
 
