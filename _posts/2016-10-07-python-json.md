@@ -22,31 +22,34 @@ python2 json的学习和使用
 在```python```中自带有```json```的处理模块，只需要```import json```就行
 
 
- ```Python```和```Json```转换表
+ ```python```和```json```转换表
 
-Python 转 Json
+python 转 json
 
-|     Python     |     JSON     |
-|:---------------|:-------------|
-|dict            |object        |
-|list, tuple     |array         |
-|str, unicode    |string        |
-|int, long, float|number        |
-|True            |true          |
-|False           |false         |
-|None            |null          |
+|     python     |      json      |
+|:---------------|:---------------|
+|dict            |object          |
+|list, tuple     |array           |
+|str, unicode    |string          |
+|int, long, float|number          |
+|True            |true            |
+|False           |false           |
+|None            |null            |
 
-JSON 转 Python
-|     JSON       |    Python    |
-|:---------------|:-------------|
-|object          |dict          |
-|array           |list          |
-|string          |unicode       |
-|number(int)     |int, long     |
-|number(real)    |float         |
-|true            |True          |
-|false           |False         |
-|null            |None          |
+
+
+json 转 python
+
+|     json       |     python     |
+|:---------------|:---------------|
+|object          |dict            |
+|array           |list            |
+|string          |unicode         |
+|number(int)     |int, long       |
+|number(real)    |float           |
+|true            |True            |
+|false           |False           |
+|null            |None            |
 
 
 在```json```数据中```false```和```true```对应python中的```False```, ```True```; ```null```对应python中的```None```
