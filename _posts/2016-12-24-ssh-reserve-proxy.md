@@ -2,7 +2,7 @@
 layout: post
 title:  ssh 反向代理配置
 date: 2016-12-24 16:17:23
-categories: python
+categories: ssh
 tags:  ssh proxy 
 ---
 
