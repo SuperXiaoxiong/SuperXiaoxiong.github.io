@@ -15,6 +15,27 @@ tags:  python json
 python2 json的学习和使用
 
 
+## 注意
+
+python 中对于字符串，不管是键还是值都用双引号，
+
+使用单引号报错：
+
+```
+print json.loads(dict_msg)
+  File "C:\Python27\lib\json\__init__.py", line 339, in loads
+      return _default_decoder.decode(s)
+        File "C:\Python27\lib\json\decoder.py", line 364, in decode
+	    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+	    TypeError: expected string or buffer
+```
+
+可以用下面的方法转换
+
+```
+json_string=json.dumps(s)
+python_obj=json.loads(json_string)
+```
 
 
 ## json的使用
