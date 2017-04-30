@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Github 使用小结"
 date:   2016-07-17 11:14:54
@@ -236,6 +236,7 @@ git remote add origin Github托管地址	//添加远程仓库， origin 是默�
 
 ```
 git clone  项目地址
+git clone --depth=1 git://someserver/somerepo   //depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 ```
 
 推送操作
@@ -253,6 +254,8 @@ git pull [options] [<repository> [<refspec>…?]]
 ```
 
 以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动
+
+
 
 ## 参考
 
