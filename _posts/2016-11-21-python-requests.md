@@ -94,11 +94,11 @@ def load_cookies_from_lwp(filename):
 
 ### urllib.quote使用注意
 
- ```requests```库中的```params```和```data```都会自动将编码转换成utf-8模式
+requests库中的```params```和```data```都会自动将编码转换成utf-8模式
  
 但构造特殊的url可能会用到```url```可能会用到```urllib.quote()```函数,```def quote(s, safe='/')```
 
-1. ```quote```方法 编码字符串```s```不支持unicode,使用会出错
+1. quote方法 编码字符串```s```不支持unicode,使用会出错
 
 ```
 urllib.quote(u'中文')

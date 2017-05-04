@@ -112,7 +112,7 @@ os.SEEK_CUR(1):  相对文件当前位置
 os.SEEK_END(2):  相对文件结束位置 
 ```
 
- ```file.tell()```，返回文件当前的偏移
+file.tell()，返回文件当前的偏移
 
 
 ## 常用文件属性
@@ -129,11 +129,11 @@ file.closed    文件是否关闭
 
 sys模块中
 
+```
 文件标准输入:sys.stdin
-
 文件标准输出:sys.stdout
-
 文件标准错误:sys.stderr
+```
 
 ### 系统命令行参数
 
