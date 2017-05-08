@@ -71,7 +71,7 @@ pool.join()
 #调用join之前，先调用close函数，否则会出错。执行完close后不会有新的进程加入到pool,join函数等待所有子进程结束
 ```
 
- ```multiprocessing```在python中是一个多进程模块，而```multiprocessing.dummy```则是一个多线程模块
+multiprocessing在python中是一个多进程模块，而```multiprocessing.dummy```则是一个多线程模块
 
 pool = ThreadPool(4)是在线程池中创建了4个子线程，pool._processes是线程使用的数量
 

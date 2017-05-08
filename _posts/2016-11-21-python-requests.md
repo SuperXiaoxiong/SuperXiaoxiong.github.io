@@ -161,6 +161,7 @@ resp = Session().send(req.prepare(), timeout=5)
 resp.status_code
 resp.request.headers
 resp.text
+```
 
 #### 钩子函数
 
