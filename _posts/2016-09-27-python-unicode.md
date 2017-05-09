@@ -16,6 +16,10 @@ python2 unicode的学习和使用
 
 
 
+
+
+
+
 ## UTF-8和Unicode的关系
 
 Unicode是一种字符集, 而UTF-8,UTF-16,UTF-32都是Unicode字符集实现的一种方式，在阮一峰的文章中有有关unicode编码的详细说明,http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
@@ -30,7 +34,7 @@ Unicode是一种字符集, 而UTF-8,UTF-16,UTF-32都是Unicode字符集实现的
 
 ### str和unicode的转换
 
- ```str```和```unicode```都是```basestring```的子串
+其中```str```和```unicode```都是```basestring```的子串
 
 ```
 unicode = str_obj.decode('str的编码')
@@ -102,7 +106,7 @@ info = codecs.open(file,'w','utf-8')
 
 ### 命令行输出
 
- ```sys.stdin.encoding```和```sys.stdout.encoding```是标准输入输出sdtin，stdout输入输出使用的编码，包命令行参数和print输出，由locale环境变量决定，所以一般print输出不需要将```Unicode```编码```encoding```。```sys.getdefaultencoding()```文件读写和字符串处理等操作使用的默认编码
+其中```sys.stdin.encoding```和```sys.stdout.encoding```是标准输入输出sdtin，stdout输入输出使用的编码，包命令行参数和print输出，由locale环境变量决定，所以一般print输出不需要将```Unicode```编码```encoding```。```sys.getdefaultencoding()```文件读写和字符串处理等操作使用的默认编码
 
 ```
 >>> print sys.stdin.encoding

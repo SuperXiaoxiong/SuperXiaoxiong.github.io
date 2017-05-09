@@ -15,6 +15,11 @@ tags:  python json
 python2 json的学习和使用
 
 
+
+
+
+
+
 ## 注意
 
 python 中对于字符串，不管是键还是值都用双引号，
@@ -43,7 +48,7 @@ python_obj=json.loads(json_string)
 在```python```中自带有```json```的处理模块，只需要```import json```就行
 
 
- ```python```和```json```转换表
+在```python```和```json```转换表
 
 python 转 json
 
