@@ -200,3 +200,4 @@ json.loads(json_str, object_hook=dict2student)
 
 * [Python解析json学习](http://crazyof.me/blog/archives/368.html)
 * [cookboook,python3](http://python3-cookbook.readthedocs.io/zh_CN/latest/c06/p02_read-write_json_data.html)
+* [廖雪峰python学习](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143192607210600a668b5112e4a979dd20e4661cc9c97000)
