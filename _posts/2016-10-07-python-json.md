@@ -142,6 +142,55 @@ UnicodeDecodeError: 'utf8' codec can't decode byte 0xd6 in position 0: invalid c
 "\u4e2d\u6587"
 ```
 
+## 将对象json化
+
+```
+import json
+
+class Student(object):
+    def __init__(self, name, age, score):
+        self.name = name
+        self.age = age
+        self.score = score
+		
+s = Student('Bob', 20, 88)		
+```
+
+对于dumps()方法，其中default参数定义了如何将任意一个对象变成可序列为json的对象，所以需要一个转换函数
+
+```
+def student2dict(std):
+    return {
+        'name': std.name,
+        'age': std.age,
+        'score': std.score
+    }
+```
+
+将类实例通过转换函数转换成dict，再序列化为json对象
+
+```
+json.dumps(s, default=student2dict)
+```
+
+可以使用实例的__dict__属性，dict属性用来存储实例变量
+
+```
+json.dumps(s, default=lambda obj: obj.__dict__)  
+```
+
+json反序列化，```loads()```方法首先转换出一个```dict```对象，然后```object_hook```参数，将dict转换成类实例
+
+```
+def dict2student(d):
+    return Student(d['name'], d['age'], d['score'])
+	
+json_str = '{"age": 20, "score": 88, "name": "Bob"}'
+json.loads(json_str, object_hook=dict2student)
+```
+
+
+
 ## 漂亮的输出
 
 1. 用```pprint()```代替```print```输出,输出json
