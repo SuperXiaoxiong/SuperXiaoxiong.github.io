@@ -1,11 +1,10 @@
 ﻿---
 layout: post
-title:  "python2 pickle序列化"
-date:   2017-05-19 19:23:52
+title:  python2 序列化pickle模块
+date: 2017-05-18 12:20:56
 categories: python
 tags:  python pickle
 ---
-
 
 * content
 {:toc}
@@ -194,7 +193,7 @@ t.test()
 
 注意：在反序列化时，那个实例的一些方法， ```__getattr__()```,```__getattribute__()```,```__setattr__()```会被调用在这种情况下方法历来与一些外部的不变量是正确的，这些类型需要实现```__getinitargs__()```,```__getnewargs__()```去建立一个不变量，否则，将不会调用```__new__()```和```__init__()```这些方法
 
-### object.__reduce__()
+### reduce()
 	
 实现```__reduce__()```方法,可以更有效和明确的序列化。在序列化的时候会无参调用```__reduce__()```方法，而且必须返回一个字符串或者是元组。
 	
@@ -214,7 +213,7 @@ t.test()
 		
 5. 一个产生字典元素的迭代器对象，```(key, value)```会成为```obj[key] = value```可以用来作为字典子类，实现了```__setitem__()```的类也可以用(可选)
 		
-### object.__reduce_ex__(protocol)
+### reduce_ex(protocol)
 
 __reduce_ex__ 的存在是为了兼容性。如果它被定义，在```pickle```时```__reduce_ex__```会代替```__reduce__```被调用。```__reduce__```也可以被定义，用于不支持```__reduce_ex__```的旧版pickle的API调用。
 
