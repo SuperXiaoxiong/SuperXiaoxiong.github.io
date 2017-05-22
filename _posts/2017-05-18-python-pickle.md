@@ -1,6 +1,6 @@
----
+ï»¿---
 layout: post
-title:  "python2 pickleÐòÁÐ»¯"
+title:  "python2 pickleåºåˆ—åŒ–"
 date:   2017-05-19 19:23:52
 categories: python
 tags:  python pickle
@@ -10,19 +10,19 @@ tags:  python pickle
 * content
 {:toc}
 
-## ¼òÊö
+## ç®€è¿°
 
-python2 pickleÐòÁÐ»¯µÄÑ§Ï°ºÍÊ¹ÓÃ
-
-
+python2 pickleåºåˆ—åŒ–çš„å­¦ä¹ å’Œä½¿ç”¨
 
 
 
 
 
-## ÒÆÖ²ÐÔ
 
-pickle ÎÄ¼þ¸ñÊ½¶ÀÁ¢ÓÚ»úÆ÷µÄÌåÏµ½á¹¹£¬¿ÉÒÔÊÊÓÃÓÚ²»Í¬ÏµÍ³ÏÂµÄpython³ÌÐò(µ±È»²»ÊÊÓÃÓÚÆäËûÓïÑÔ)£¬¼ìË÷Ö§³ÖµÄ¸ñÊ½
+
+## ç§»æ¤æ€§
+
+pickle æ–‡ä»¶æ ¼å¼ç‹¬ç«‹äºŽæœºå™¨çš„ä½“ç³»ç»“æž„ï¼Œå¯ä»¥é€‚ç”¨äºŽä¸åŒç³»ç»Ÿä¸‹çš„pythonç¨‹åº(å½“ç„¶ä¸é€‚ç”¨äºŽå…¶ä»–è¯­è¨€)ï¼Œæ£€ç´¢æ”¯æŒçš„æ ¼å¼
 
 ```
 >>> import pickle
@@ -32,25 +32,25 @@ pickle ÎÄ¼þ¸ñÊ½¶ÀÁ¢ÓÚ»úÆ÷µÄÌåÏµ½á¹¹£¬¿ÉÒÔÊÊÓÃÓÚ²»Í¬ÏµÍ³ÏÂµÄpython³ÌÐò(µ±È»²»ÊÊÓÃ
 ['1.0', '1.1', '1.2', '1.3', '2.0']
 ```
 
-## »ù±¾Ê¹ÓÃ
+## åŸºæœ¬ä½¿ç”¨
 
-½«Python¶ÔÏóÐòÁÐ»¯ÎªÒ»¸ö×Ö½ÚÁ÷£¬ÒÔ±ã±£´æµ½ÎÄ¼þ¡¢´æ´¢µ½Êý¾Ý¿â»òÕßÍ¨¹ýÍøÂç´«Êä£¬ÐòÁÐ»¯µÄ×îÆÕ±é×ö·¨ÊÇÍ¨¹ýpickleÄ£¿é¡£
+å°†Pythonå¯¹è±¡åºåˆ—åŒ–ä¸ºä¸€ä¸ªå­—èŠ‚æµï¼Œä»¥ä¾¿ä¿å­˜åˆ°æ–‡ä»¶ã€å­˜å‚¨åˆ°æ•°æ®åº“æˆ–è€…é€šè¿‡ç½‘ç»œä¼ è¾“ï¼Œåºåˆ—åŒ–çš„æœ€æ™®éåšæ³•æ˜¯é€šè¿‡pickleæ¨¡å—ã€‚
 
-ÐòÁÐ»¯µÄ×ö·¨¶¼»ù±¾ÏàËÆ
+åºåˆ—åŒ–çš„åšæ³•éƒ½åŸºæœ¬ç›¸ä¼¼
 
-### Ê¹ÓÃËµÃ÷
+### ä½¿ç”¨è¯´æ˜Ž
 
 ```
-pickle.dump(data, file) //½«¶ÔÏó´æ´¢µ½ÎÄ¼þÖÐ£¬file:Ò»¸ö¿ÉÐ´µÄÎÄ¼þ¶ÔÏó(wb)
-s = pickle.dumps(data) //½«¶ÔÏó×ª»»³ÉÒ»¸ö´æ´¢¶ÔÏó
+pickle.dump(data, file) //å°†å¯¹è±¡å­˜å‚¨åˆ°æ–‡ä»¶ä¸­ï¼Œfile:ä¸€ä¸ªå¯å†™çš„æ–‡ä»¶å¯¹è±¡(wb)
+s = pickle.dumps(data) //å°†å¯¹è±¡è½¬æ¢æˆä¸€ä¸ªå­˜å‚¨å¯¹è±¡
 
-data1 = pickle.load(file) //´ÓÎÄ¼þÖÐ¶ÁÈë £¬file:Ò»¸ö¿É¶ÁµÄÎÄ¼þ¶ÔÏó(rb)
+data1 = pickle.load(file) //ä»Žæ–‡ä»¶ä¸­è¯»å…¥ ï¼Œfile:ä¸€ä¸ªå¯è¯»çš„æ–‡ä»¶å¯¹è±¡(rb)
 data2 = pickle.loads(s) 
 ```
 
-### ¿ÉÒÔ±»ÐòÁÐ»¯µÄÀàÐÍ
+### å¯ä»¥è¢«åºåˆ—åŒ–çš„ç±»åž‹
 
-python 2°æ±¾
+python 2ç‰ˆæœ¬
 
 ```
 1. None, True, and False
@@ -63,11 +63,11 @@ python 2°æ±¾
 8. instances of such classes whose __dict__ or the result of calling __getstate__() is picklable (see section The pickle protocol for details).
 ```
 
-### Òì³£
+### å¼‚å¸¸
 
-³¢ÊÔÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯¶ÔÏóÊ±¿ÉÄÜ·¢Éú```PicklingError```Òì³£;·¢ÉúÒì³£Ê±£¬ÊýÁ¿²»Ã÷µÄ×Ö½Ú±»Ð´Èëµ½ÁËµ×²ãÎÄ¼þÖÐ¡£µ±³¢ÊÔÐòÁÐ»¯¸ß¶ÈµÝ¹éµÄÊý¾Ý½á¹¹¿ÉÄÜ³¬¹ý×î´óµÄµÝ¹é²ãÊý£¬ÕâÑù»áraiseÒ»¸ö```RuntimeError```Òì³£¡£ÐÞ¸ÄµÝ¹é²ãÊýµÄÏÞÖÆÒ»¶¨ÒªÐ¡ÐÄ```sys.setrecursionlimit()```.
+å°è¯•åºåˆ—åŒ–å’Œååºåˆ—åŒ–å¯¹è±¡æ—¶å¯èƒ½å‘ç”Ÿ```PicklingError```å¼‚å¸¸;å‘ç”Ÿå¼‚å¸¸æ—¶ï¼Œæ•°é‡ä¸æ˜Žçš„å­—èŠ‚è¢«å†™å…¥åˆ°äº†åº•å±‚æ–‡ä»¶ä¸­ã€‚å½“å°è¯•åºåˆ—åŒ–é«˜åº¦é€’å½’çš„æ•°æ®ç»“æž„å¯èƒ½è¶…è¿‡æœ€å¤§çš„é€’å½’å±‚æ•°ï¼Œè¿™æ ·ä¼šraiseä¸€ä¸ª```RuntimeError```å¼‚å¸¸ã€‚ä¿®æ”¹é€’å½’å±‚æ•°çš„é™åˆ¶ä¸€å®šè¦å°å¿ƒ```sys.setrecursionlimit()```.
 
-### º¯ÊýºÍÀàÐòÁÐ»¯
+### å‡½æ•°å’Œç±»åºåˆ—åŒ–
 
 ```
 class Foo:
@@ -79,25 +79,25 @@ picklestring = pickle.dumps(Foo)
 __main__.Foo
 ```
 
-½ö½öÖ»ÓÐº¯ÊýÃû×Ö±»ÐòÁÐ»¯£¬ºÍ¶¨ÒåÕâ¸öº¯ÊýµÄÄ£¿é¡£º¯Êý´úÂëºÍº¯ÊýÊôÐÔ¶¼Ã»ÓÐ±»ÐòÁÐ»¯¡£
+ä»…ä»…åªæœ‰å‡½æ•°åå­—è¢«åºåˆ—åŒ–ï¼Œå’Œå®šä¹‰è¿™ä¸ªå‡½æ•°çš„æ¨¡å—ã€‚å‡½æ•°ä»£ç å’Œå‡½æ•°å±žæ€§éƒ½æ²¡æœ‰è¢«åºåˆ—åŒ–ã€‚
 
-ÕâÐ©ÏÞÖÆ¾ÍÊÇÎªÊ²Ã´ ¿ÉÐòÁÐ»¯µÄº¯ÊýºÍÀà±ØÐëÒª¶¨ÒåÔÚÄ£¿éµÄ¶¥²ãÖÐ
+è¿™äº›é™åˆ¶å°±æ˜¯ä¸ºä»€ä¹ˆ å¯åºåˆ—åŒ–çš„å‡½æ•°å’Œç±»å¿…é¡»è¦å®šä¹‰åœ¨æ¨¡å—çš„é¡¶å±‚ä¸­
 
-ÏàÍ¬µÄ£¬µ±ÀàµÄÊµÀýÊÇÐòÁÐ»¯µÄÊ±ºò£¬ËûÃÇµÄ´úÂëºÍÊý¾ÝÃ»ÓÐ±»ÐòÁÐ»¯¡£Ö»ÓÐËûÃÇÊµÀýµÄÊý¾Ý±»ÐòÁÐ»¯¡£
+ç›¸åŒçš„ï¼Œå½“ç±»çš„å®žä¾‹æ˜¯åºåˆ—åŒ–çš„æ—¶å€™ï¼Œä»–ä»¬çš„ä»£ç å’Œæ•°æ®æ²¡æœ‰è¢«åºåˆ—åŒ–ã€‚åªæœ‰ä»–ä»¬å®žä¾‹çš„æ•°æ®è¢«åºåˆ—åŒ–ã€‚
 
-¶ÔÓÚº¯Êý»òÀàµÄÐòÁÐ»¯ÊÇÒÔÃû×ÖÀ´Ê¶±ðµÄ£¬ËùÒÔÐèÒªimportÏàÓ¦µÄmodule
+å¯¹äºŽå‡½æ•°æˆ–ç±»çš„åºåˆ—åŒ–æ˜¯ä»¥åå­—æ¥è¯†åˆ«çš„ï¼Œæ‰€ä»¥éœ€è¦importç›¸åº”çš„module
 
-## ÀàÊµÀýÐòÁÐ»¯
+## ç±»å®žä¾‹åºåˆ—åŒ–
 
-µ±```unpickle```ÀàµÄÊµÀýÊ±£¬Í¨³£²»»áÔÙµ÷ÓÃËüÃÇµÄ```_init_()```·½·¨¡£Ïà·´£¬```Python```´´½¨Ò»¸öÍ¨ÓÃÀàÊµÀý£¬²¢Ó¦ÓÃÒÑ½øÐÐ¹ý```pickle```µÄÊµÀýÊôÐÔ£¬Í¬Ê±ÉèÖÃ¸ÃÊµÀýµÄ```_class_```ÊôÐÔ£¬Ê¹ÆäÖ¸ÏòÔ­À´µÄÀà¡£
+å½“```unpickle```ç±»çš„å®žä¾‹æ—¶ï¼Œé€šå¸¸ä¸ä¼šå†è°ƒç”¨å®ƒä»¬çš„```_init_()```æ–¹æ³•ã€‚ç›¸åï¼Œ```Python```åˆ›å»ºä¸€ä¸ªé€šç”¨ç±»å®žä¾‹ï¼Œå¹¶åº”ç”¨å·²è¿›è¡Œè¿‡```pickle```çš„å®žä¾‹å±žæ€§ï¼ŒåŒæ—¶è®¾ç½®è¯¥å®žä¾‹çš„```_class_```å±žæ€§ï¼Œä½¿å…¶æŒ‡å‘åŽŸæ¥çš„ç±»ã€‚
 
-### getstateºÍsetstate
+### getstateå’Œsetstate
 
-·½·¨```__getstate__()```ÔÚÐòÁÐ»¯Ê±µ÷ÓÃ:Ä¬ÈÏÐòÁÐ»¯³É```__dict__```,µ÷ÓÃ```__getstate__()```ºóreturnÖµ×÷ÎªÐòÁÐ»¯Êý¾ÝÁ÷
+æ–¹æ³•```__getstate__()```åœ¨åºåˆ—åŒ–æ—¶è°ƒç”¨:é»˜è®¤åºåˆ—åŒ–æˆ```__dict__```,è°ƒç”¨```__getstate__()```åŽreturnå€¼ä½œä¸ºåºåˆ—åŒ–æ•°æ®æµ
 
-·½·¨```__setstate__()```ÓÃÓÚ·´ÐòÁÐ»¯Ê±```load```²Ù×÷£¬ÊÊÓÃ²ÎÊý»Ö¸´ÊôÐÔ
+æ–¹æ³•```__setstate__()```ç”¨äºŽååºåˆ—åŒ–æ—¶```load```æ“ä½œï¼Œé€‚ç”¨å‚æ•°æ¢å¤å±žæ€§
 
-×¢Òâ£ºÔÚÐÂÊ½ÀàÖÐ£¬Èç¹û```__getstate__()```·µ»ØÁËÒ»¸ö´íÎóµÄÖµ,```__setstate__()```·½·¨½«²»»áµ÷ÓÃ
+æ³¨æ„ï¼šåœ¨æ–°å¼ç±»ä¸­ï¼Œå¦‚æžœ```__getstate__()```è¿”å›žäº†ä¸€ä¸ªé”™è¯¯çš„å€¼,```__setstate__()```æ–¹æ³•å°†ä¸ä¼šè°ƒç”¨
 
 ```
 class Countdown(object):
@@ -129,7 +129,7 @@ t.__class__ = Countdown
 t.test() 
 ```
 
-### ²ÎÊý»ñÈ¡
+### å‚æ•°èŽ·å–
 
 ```
 def save(obj):
@@ -142,21 +142,21 @@ def load(cls, attributes):
 	
 ```
 
-¾ÉÊ½Àà```object.__getinitargs__()```
+æ—§å¼ç±»```object.__getinitargs__()```
 
-Èç¹ûÄãÏëÈÃÄãµÄÀàÔÚÐòÁÐ»¯Ê±Ê±µ÷ÓÃ```__init__()```,Äã¿ÉÒÔ¶¨Òå```__getinitargs__()```,Ëü»á·µ»ØÒ»¸ö²ÎÊýÔª×é£¬Õâ¸öÔª×é»á´«µÝ¸ø```__init__()```¡£×¢Òâ£¬Õâ¸ö·½·¨Ö»ÄÜÓÃÓÚ¾ÉÊ½Àà¡£²»Ö§³Ökeyword¡£__getinitargs__()ÔÚÐòÁÐ»¯Ê±µ÷ÓÃ¡£Ëü·µ»ØµÄÔª×é±»²¢Èëµ½pickleµÄÊµÀýÖÐ
+å¦‚æžœä½ æƒ³è®©ä½ çš„ç±»åœ¨åºåˆ—åŒ–æ—¶æ—¶è°ƒç”¨```__init__()```,ä½ å¯ä»¥å®šä¹‰```__getinitargs__()```,å®ƒä¼šè¿”å›žä¸€ä¸ªå‚æ•°å…ƒç»„ï¼Œè¿™ä¸ªå…ƒç»„ä¼šä¼ é€’ç»™```__init__()```ã€‚æ³¨æ„ï¼Œè¿™ä¸ªæ–¹æ³•åªèƒ½ç”¨äºŽæ—§å¼ç±»ã€‚ä¸æ”¯æŒkeywordã€‚__getinitargs__()åœ¨åºåˆ—åŒ–æ—¶è°ƒç”¨ã€‚å®ƒè¿”å›žçš„å…ƒç»„è¢«å¹¶å…¥åˆ°pickleçš„å®žä¾‹ä¸­
 
-ÐÂÊ½Àà```object.__getnewargs__()```
+æ–°å¼ç±»```object.__getnewargs__()```
 	
-¶ÔÐÂÊ½ÀàÀ´Ëµ£¬Äã¿ÉÒÔÍ¨¹ýÕâ¸ö·½·¨¸Ä±äÀàÔÚ·´ÐòÁÐ»¯Ê±´«µÝ¸ø```__new__()```µÄ²ÎÊý¡£Õâ¸ö·½·¨Ó¦¸Ã·µ»ØÒ»¸ö²ÎÊýÔª×é¡£
+å¯¹æ–°å¼ç±»æ¥è¯´ï¼Œä½ å¯ä»¥é€šè¿‡è¿™ä¸ªæ–¹æ³•æ”¹å˜ç±»åœ¨ååºåˆ—åŒ–æ—¶ä¼ é€’ç»™```__new__()```çš„å‚æ•°ã€‚è¿™ä¸ªæ–¹æ³•åº”è¯¥è¿”å›žä¸€ä¸ªå‚æ•°å…ƒç»„ã€‚
 
-´´½¨Ò»¸öÐÂÑùÊ½Àà CµÄÊµÀý
+åˆ›å»ºä¸€ä¸ªæ–°æ ·å¼ç±» Cçš„å®žä¾‹
 
 ```
 obj = C.__new__(C, *args)
 ```
 
-ÆäÖÐargsÊÇÔÚÔ­Ê¼¶ÔÏóÉÏµ÷ÓÃ__ getnewargs __()µÄ½á¹û£»
+å…¶ä¸­argsæ˜¯åœ¨åŽŸå§‹å¯¹è±¡ä¸Šè°ƒç”¨__ getnewargs __()çš„ç»“æžœï¼›
 
 ```
 class Countdown(object):
@@ -192,35 +192,35 @@ t.test()
 ```
 
 
-×¢Òâ£ºÔÚ·´ÐòÁÐ»¯Ê±£¬ÄÇ¸öÊµÀýµÄÒ»Ð©·½·¨£¬ ```__getattr__()```,```__getattribute__()```,```__setattr__()```»á±»µ÷ÓÃÔÚÕâÖÖÇé¿öÏÂ·½·¨ÀúÀ´ÓëÒ»Ð©Íâ²¿µÄ²»±äÁ¿ÊÇÕýÈ·µÄ£¬ÕâÐ©ÀàÐÍÐèÒªÊµÏÖ```__getinitargs__()```,```__getnewargs__()```È¥½¨Á¢Ò»¸ö²»±äÁ¿£¬·ñÔò£¬½«²»»áµ÷ÓÃ```__new__()```ºÍ```__init__()```ÕâÐ©·½·¨
+æ³¨æ„ï¼šåœ¨ååºåˆ—åŒ–æ—¶ï¼Œé‚£ä¸ªå®žä¾‹çš„ä¸€äº›æ–¹æ³•ï¼Œ ```__getattr__()```,```__getattribute__()```,```__setattr__()```ä¼šè¢«è°ƒç”¨åœ¨è¿™ç§æƒ…å†µä¸‹æ–¹æ³•åŽ†æ¥ä¸Žä¸€äº›å¤–éƒ¨çš„ä¸å˜é‡æ˜¯æ­£ç¡®çš„ï¼Œè¿™äº›ç±»åž‹éœ€è¦å®žçŽ°```__getinitargs__()```,```__getnewargs__()```åŽ»å»ºç«‹ä¸€ä¸ªä¸å˜é‡ï¼Œå¦åˆ™ï¼Œå°†ä¸ä¼šè°ƒç”¨```__new__()```å’Œ```__init__()```è¿™äº›æ–¹æ³•
 
 ### object.__reduce__()
 	
-ÊµÏÖ```__reduce__()```·½·¨,¿ÉÒÔ¸üÓÐÐ§ºÍÃ÷È·µÄÐòÁÐ»¯¡£ÔÚÐòÁÐ»¯µÄÊ±ºò»áÎÞ²Îµ÷ÓÃ```__reduce__()```·½·¨£¬¶øÇÒ±ØÐë·µ»ØÒ»¸ö×Ö·û´®»òÕßÊÇÔª×é¡£
+å®žçŽ°```__reduce__()```æ–¹æ³•,å¯ä»¥æ›´æœ‰æ•ˆå’Œæ˜Žç¡®çš„åºåˆ—åŒ–ã€‚åœ¨åºåˆ—åŒ–çš„æ—¶å€™ä¼šæ— å‚è°ƒç”¨```__reduce__()```æ–¹æ³•ï¼Œè€Œä¸”å¿…é¡»è¿”å›žä¸€ä¸ªå­—ç¬¦ä¸²æˆ–è€…æ˜¯å…ƒç»„ã€‚
 	
-·µ»ØÖµÊÇÒ»¸ö´ú±íÈ«¾ÖÃû³ÆµÄ×Ö·û´®£¬```Python```»á²éÕÒ²¢```pickle```¡£
+è¿”å›žå€¼æ˜¯ä¸€ä¸ªä»£è¡¨å…¨å±€åç§°çš„å­—ç¬¦ä¸²ï¼Œ```Python```ä¼šæŸ¥æ‰¾å¹¶```pickle```ã€‚
 	
-·µ»ØÖµÊÇÒ»¸öÔª×é£¬±ØÐëÊÇ2µ½5¸öÔªËØ¡£¿ÉÑ¡ÔªËØ¿ÉÒÔ±»É¾³ý£¬```None```Ò²¿ÉÒÔ±»µ±×öÖµ¡£Ôª×éµÄÄÚÈÝ±»Õý³£µÄÐòÁÐ»¯¡£
+è¿”å›žå€¼æ˜¯ä¸€ä¸ªå…ƒç»„ï¼Œå¿…é¡»æ˜¯2åˆ°5ä¸ªå…ƒç´ ã€‚å¯é€‰å…ƒç´ å¯ä»¥è¢«åˆ é™¤ï¼Œ```None```ä¹Ÿå¯ä»¥è¢«å½“åšå€¼ã€‚å…ƒç»„çš„å†…å®¹è¢«æ­£å¸¸çš„åºåˆ—åŒ–ã€‚
 	
-Ôª×éµÄÔªËØ¶¨Òå£º
+å…ƒç»„çš„å…ƒç´ å®šä¹‰ï¼š
 
-1. Ò»¸ö¿ÉÒÔ±»µ÷ÓÃµÄ¶ÔÏó(Àà)£¬ÖØ½¨Ê±Ê¹ÓÃ(python2ÖÐÒªÇó ±»×¢²áµ÷ÓÃµÄ°²È«¹¹ÔìÆ÷»òÕß±ØÐëÓÐ```__safe_for_unpickling__```ÎªÕæµÄ·´ÐòÁÐ»¯ÊôÐÔ¡£·ñÔò£¬½«»áraiseÒ»¸öUnpicklingError¡£); 
+1. ä¸€ä¸ªå¯ä»¥è¢«è°ƒç”¨çš„å¯¹è±¡(ç±»)ï¼Œé‡å»ºæ—¶ä½¿ç”¨(python2ä¸­è¦æ±‚ è¢«æ³¨å†Œè°ƒç”¨çš„å®‰å…¨æž„é€ å™¨æˆ–è€…å¿…é¡»æœ‰```__safe_for_unpickling__```ä¸ºçœŸçš„ååºåˆ—åŒ–å±žæ€§ã€‚å¦åˆ™ï¼Œå°†ä¼šraiseä¸€ä¸ªUnpicklingErrorã€‚); 
 
-2. ²ÎÊýÔª×é£¬¹©¶ÔÏóÖØ½¨Ê±µ÷ÓÃ(Èç¹û²»½ÓÊÕ²ÎÊýÊÇÒ»¸ö¿ÕÔª×é); 
+2. å‚æ•°å…ƒç»„ï¼Œä¾›å¯¹è±¡é‡å»ºæ—¶è°ƒç”¨(å¦‚æžœä¸æŽ¥æ”¶å‚æ•°æ˜¯ä¸€ä¸ªç©ºå…ƒç»„); 
 		
-3. ¶ÔÏóµÄ×´Ì¬£¬½«»á±»´«µ½```__setstate__()```·½·¨¡£Èç¹ûÕâ¸ö¶ÔÏóÃ»ÓÐ```__setstate__()```·½·¨£¬Õâ¸öÖµ±ØÐëÊÇÒ»¸ö×Öµä£¬¶øÇÒ»á±»¼ÓÈë¶ÔÏóµÄ```__dict__```(¿ÉÑ¡)
+3. å¯¹è±¡çš„çŠ¶æ€ï¼Œå°†ä¼šè¢«ä¼ åˆ°```__setstate__()```æ–¹æ³•ã€‚å¦‚æžœè¿™ä¸ªå¯¹è±¡æ²¡æœ‰```__setstate__()```æ–¹æ³•ï¼Œè¿™ä¸ªå€¼å¿…é¡»æ˜¯ä¸€ä¸ªå­—å…¸ï¼Œè€Œä¸”ä¼šè¢«åŠ å…¥å¯¹è±¡çš„```__dict__```(å¯é€‰)
 		
-4. Ò»¸ö²úÉúÁÐ±íÔªËØµÄµü´úÆ÷¶ÔÏó, ÓÃ```append(item)```»òÕß```extend(list_of_items)```¼ÓÈëÕâ¸ö¶ÔÏó¡£ÁÐ¾Ù×ÓÀàÊÇºÜÖØÒª£¬µ«ÊÇÒ²¿ÉÒÔÓÃ×÷ÆäËûÀà£¬Ö»ÒªÓÐ```append£¨£©```ºÍ```extend£¨£©```µÄ·½·¨(¿ÉÑ¡)
+4. ä¸€ä¸ªäº§ç”Ÿåˆ—è¡¨å…ƒç´ çš„è¿­ä»£å™¨å¯¹è±¡, ç”¨```append(item)```æˆ–è€…```extend(list_of_items)```åŠ å…¥è¿™ä¸ªå¯¹è±¡ã€‚åˆ—ä¸¾å­ç±»æ˜¯å¾ˆé‡è¦ï¼Œä½†æ˜¯ä¹Ÿå¯ä»¥ç”¨ä½œå…¶ä»–ç±»ï¼Œåªè¦æœ‰```appendï¼ˆï¼‰```å’Œ```extendï¼ˆï¼‰```çš„æ–¹æ³•(å¯é€‰)
 		
-5. Ò»¸ö²úÉú×ÖµäÔªËØµÄµü´úÆ÷¶ÔÏó£¬```(key, value)```»á³ÉÎª```obj[key] = value```¿ÉÒÔÓÃÀ´×÷Îª×Öµä×ÓÀà£¬ÊµÏÖÁË```__setitem__()```µÄÀàÒ²¿ÉÒÔÓÃ(¿ÉÑ¡)
+5. ä¸€ä¸ªäº§ç”Ÿå­—å…¸å…ƒç´ çš„è¿­ä»£å™¨å¯¹è±¡ï¼Œ```(key, value)```ä¼šæˆä¸º```obj[key] = value```å¯ä»¥ç”¨æ¥ä½œä¸ºå­—å…¸å­ç±»ï¼Œå®žçŽ°äº†```__setitem__()```çš„ç±»ä¹Ÿå¯ä»¥ç”¨(å¯é€‰)
 		
 ### object.__reduce_ex__(protocol)
 
-__reduce_ex__ µÄ´æÔÚÊÇÎªÁË¼æÈÝÐÔ¡£Èç¹ûËü±»¶¨Òå£¬ÔÚ```pickle```Ê±```__reduce_ex__```»á´úÌæ```__reduce__```±»µ÷ÓÃ¡£```__reduce__```Ò²¿ÉÒÔ±»¶¨Òå£¬ÓÃÓÚ²»Ö§³Ö```__reduce_ex__```µÄ¾É°æpickleµÄAPIµ÷ÓÃ¡£
+__reduce_ex__ çš„å­˜åœ¨æ˜¯ä¸ºäº†å…¼å®¹æ€§ã€‚å¦‚æžœå®ƒè¢«å®šä¹‰ï¼Œåœ¨```pickle```æ—¶```__reduce_ex__```ä¼šä»£æ›¿```__reduce__```è¢«è°ƒç”¨ã€‚```__reduce__```ä¹Ÿå¯ä»¥è¢«å®šä¹‰ï¼Œç”¨äºŽä¸æ”¯æŒ```__reduce_ex__```çš„æ—§ç‰ˆpickleçš„APIè°ƒç”¨ã€‚
 
-## ÏÞÖÆÈ«¾Ö±äÁ¿
+## é™åˆ¶å…¨å±€å˜é‡
 
-pickleÐòÁÐ»¯ÔÚÊ¹ÓÃ¹ý³ÌÖÐ»á´øÀ´ºÜ¶à°²È«ÐÔÎÊÌâ£¬ËùÒÔÔÚÊ¹ÓÃµÄ¹ý³ÌÖÐ½øÐÐ×Ô¶¨ÒåµÄ```Unpickler.find_class()```£¬¶Ô¿ÉÒÔÊ¹ÓÃµÄÄ£¿é×ö°×Ãûµ¥ÏÞÖÆ£¬±£Ö¤°²È«ÐÔ
+pickleåºåˆ—åŒ–åœ¨ä½¿ç”¨è¿‡ç¨‹ä¸­ä¼šå¸¦æ¥å¾ˆå¤šå®‰å…¨æ€§é—®é¢˜ï¼Œæ‰€ä»¥åœ¨ä½¿ç”¨çš„è¿‡ç¨‹ä¸­è¿›è¡Œè‡ªå®šä¹‰çš„```Unpickler.find_class()```ï¼Œå¯¹å¯ä»¥ä½¿ç”¨çš„æ¨¡å—åšç™½åå•é™åˆ¶ï¼Œä¿è¯å®‰å…¨æ€§
 
 ```
 import builtins
@@ -250,7 +250,7 @@ def restricted_loads(s):
     return RestrictedUnpickler(io.BytesIO(s)).load()
 ```	
 
-ÉÏÃæÕâ¸öÀý×ÓÖ»ÔÊÐíÊ¹ÓÃ```builtins```Ä£¿éÖÐ¼¸¸ö°²È«Àà
+ä¸Šé¢è¿™ä¸ªä¾‹å­åªå…è®¸ä½¿ç”¨```builtins```æ¨¡å—ä¸­å‡ ä¸ªå®‰å…¨ç±»
 
 ```
 >>> restricted_loads(pickle.dumps([1, 2, range(15)]))
@@ -267,35 +267,35 @@ Traceback (most recent call last):
 pickle.UnpicklingError: global 'builtins.eval' is forbidden
 ```
 
-## ÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯Íâ²¿¶ÔÏó(´ýÍêÉÆ)
+## åºåˆ—åŒ–å’Œååºåˆ—åŒ–å¤–éƒ¨å¯¹è±¡(å¾…å®Œå–„)
 
-¶ÔÓÚ¶ÔÏóµÄ³Ö¾ÃÐÔµÄÓÅÊÆ£¬ÐòÁÐ»¯Ä£¿éÖ§³ÖÒýÓÃ¶ÔÏóÍâ²¿Êý¾ÝÁ÷µÄÏë·¨¡£ºÜ¶à¶ÔÏó¶¼ÊÇÓÃ³Ö¾ÃÐÔidÒýÓÃ£¬µ«ÊÇÃû×Ö½ö½öÊÇÈÎÒâµÄ¿ÉÒÔ´òÓ¡µÄascii×Ö·û¡£Ãû×Ö²¢²»ÊÇ°´ÕÕÐòÁÐ»¯Ä£¿é¶¨ÒåÕâ¸ö·½·¨£»´ú±íÁËÓÃ»§¶ÔÓÚÐòÁÐ»¯ºÍ·´ÐòÁÐ»¯×Ô¶¨Òåº¯Êý¡£
+å¯¹äºŽå¯¹è±¡çš„æŒä¹…æ€§çš„ä¼˜åŠ¿ï¼Œåºåˆ—åŒ–æ¨¡å—æ”¯æŒå¼•ç”¨å¯¹è±¡å¤–éƒ¨æ•°æ®æµçš„æƒ³æ³•ã€‚å¾ˆå¤šå¯¹è±¡éƒ½æ˜¯ç”¨æŒä¹…æ€§idå¼•ç”¨ï¼Œä½†æ˜¯åå­—ä»…ä»…æ˜¯ä»»æ„çš„å¯ä»¥æ‰“å°çš„asciiå­—ç¬¦ã€‚åå­—å¹¶ä¸æ˜¯æŒ‰ç…§åºåˆ—åŒ–æ¨¡å—å®šä¹‰è¿™ä¸ªæ–¹æ³•ï¼›ä»£è¡¨äº†ç”¨æˆ·å¯¹äºŽåºåˆ—åŒ–å’Œååºåˆ—åŒ–è‡ªå®šä¹‰å‡½æ•°ã€‚
 	
-¶¨ÒåÍâ²¿³Ö¾Ã»¯ÊµÌåid£¬ÐèÒªÉèÖÃpickleµÄpersistent_idÊôÐÔ£¬ºÍ·´ÐòÁÐ»¯µÄpersistent_loadµÄÊôÐÔ
+å®šä¹‰å¤–éƒ¨æŒä¹…åŒ–å®žä½“idï¼Œéœ€è¦è®¾ç½®pickleçš„persistent_idå±žæ€§ï¼Œå’Œååºåˆ—åŒ–çš„persistent_loadçš„å±žæ€§
 	
-ÐòÁÐ»¯¶ÔÏóÓÐÒ»¸öÍâ²¿ÊµÌåid£¬ÐòÁÐ»¯±ØÐëÓÐ×Ô¶¨Òåpersistent_id()·½·¨£¬°Ñ¶ÔÏó×÷Îª²ÎÊý£¬·µ»ØNone»òÕß³Ö¾Ã»¯id¡£µ±·µ»ØNoneµÄÊ±ºò£¬ÐòÁÐ»¯Æ÷½ö½ö°Ñ¶ÔÏóºÍÕý³£Çé¿öÒ»Ñùpickle¡£µ±·µ»ØÁËÒ»¸ö³Ö¾Ã»¯id×Ö·û´®£¬»áÓÐÒ»¸ö±ê¼Ç£¬·´ÐòÁÐ»¯µÄÊ±ºò¾Í»á±»ÊÓÎª³Ö¾Ã»¯id
+åºåˆ—åŒ–å¯¹è±¡æœ‰ä¸€ä¸ªå¤–éƒ¨å®žä½“idï¼Œåºåˆ—åŒ–å¿…é¡»æœ‰è‡ªå®šä¹‰persistent_id()æ–¹æ³•ï¼ŒæŠŠå¯¹è±¡ä½œä¸ºå‚æ•°ï¼Œè¿”å›žNoneæˆ–è€…æŒä¹…åŒ–idã€‚å½“è¿”å›žNoneçš„æ—¶å€™ï¼Œåºåˆ—åŒ–å™¨ä»…ä»…æŠŠå¯¹è±¡å’Œæ­£å¸¸æƒ…å†µä¸€æ ·pickleã€‚å½“è¿”å›žäº†ä¸€ä¸ªæŒä¹…åŒ–idå­—ç¬¦ä¸²ï¼Œä¼šæœ‰ä¸€ä¸ªæ ‡è®°ï¼Œååºåˆ—åŒ–çš„æ—¶å€™å°±ä¼šè¢«è§†ä¸ºæŒä¹…åŒ–id
 	
-·´ÐòÁÐ»¯Íâ²¿ÊµÌåµÄÊ±ºò£¬·´ÐòÁÐ»¯Æ÷±ØÐëÓÐ×Ô¶¨ÒåµÄpersistent_load()¹¦ÄÜ£º½«³Ö¾Ã»¯id×÷Îª²ÎÊý·µ»ØÒ»¸ö¿ÉÒÔÒýÓÃµÄ¶ÔÏó
+ååºåˆ—åŒ–å¤–éƒ¨å®žä½“çš„æ—¶å€™ï¼Œååºåˆ—åŒ–å™¨å¿…é¡»æœ‰è‡ªå®šä¹‰çš„persistent_load()åŠŸèƒ½ï¼šå°†æŒä¹…åŒ–idä½œä¸ºå‚æ•°è¿”å›žä¸€ä¸ªå¯ä»¥å¼•ç”¨çš„å¯¹è±¡
 	
-ÔÚcPickleÄ£¿éÖÐ£¬·´ÐòÁÐ»¯µÄpersistent_loadÊôÐÔÒ²¿ÉÒÔ±»ÉèÖÃ³ÉÎªPython ÁÐ±í¡£ÔÚÕâÖÖÇé¿öÏÂ£¬·´ÐòÁÐ»¯¼ì²âµ½ÁË³Ö¾Ã»¯id£¬³Ö¾Ã»¯id½ö½ö±»¼ÓÈëµ½listÖÐ¡£Õâ¸ö¹¦ÄÜ´æÔÚËùÒÔÐòÁÐ»¯Êý¾Ý¿ÉÒÔ±»ÐáÌ½µ½ÔÚÊ¹ÓÃ¶ÔÏóµÄÒýÓÃÊ±£¬¶ø²»ÊÇ°ÑËùÓÐµÄ¶ÔÏó°²×°³ÉÎªÒ»¸öpickle¡£ÉèÖÃpersistent_loadµ½Ò»¸öÁÐ±íÖÐ ¾­³£±¸ÓÃÔÚ·´ÐòÁÐ»¯µÄ noload() ÔÚÁªºÏµÄÊ±ºò
+åœ¨cPickleæ¨¡å—ä¸­ï¼Œååºåˆ—åŒ–çš„persistent_loadå±žæ€§ä¹Ÿå¯ä»¥è¢«è®¾ç½®æˆä¸ºPython åˆ—è¡¨ã€‚åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œååºåˆ—åŒ–æ£€æµ‹åˆ°äº†æŒä¹…åŒ–idï¼ŒæŒä¹…åŒ–idä»…ä»…è¢«åŠ å…¥åˆ°listä¸­ã€‚è¿™ä¸ªåŠŸèƒ½å­˜åœ¨æ‰€ä»¥åºåˆ—åŒ–æ•°æ®å¯ä»¥è¢«å—…æŽ¢åˆ°åœ¨ä½¿ç”¨å¯¹è±¡çš„å¼•ç”¨æ—¶ï¼Œè€Œä¸æ˜¯æŠŠæ‰€æœ‰çš„å¯¹è±¡å®‰è£…æˆä¸ºä¸€ä¸ªpickleã€‚è®¾ç½®persistent_loadåˆ°ä¸€ä¸ªåˆ—è¡¨ä¸­ ç»å¸¸å¤‡ç”¨åœ¨ååºåˆ—åŒ–çš„ noload() åœ¨è”åˆçš„æ—¶å€™
 	
 Subclassing Unpicklers	
 	
-Ä¬ÈÏµÄ£¬·´ÐòÁÐ»¯½«»áµ¼Èë£¨pickle dataÖÐ£©ËùÓÐµÄÀà¡£Äã¿ÉÒÔ¾«È·¿ØÖÆ±»·´ÐòÁÐ»¯µÄÄÚÈÝºÍ±»µ÷ÓÃµÄ×ÔÊÊÓ¦µÄÄÚÈÝ¡£²»ÐÒµÄÊÇ£¬pickleºÍcpickleÊÇ²»Ò»ÑùµÄ
+é»˜è®¤çš„ï¼Œååºåˆ—åŒ–å°†ä¼šå¯¼å…¥ï¼ˆpickle dataä¸­ï¼‰æ‰€æœ‰çš„ç±»ã€‚ä½ å¯ä»¥ç²¾ç¡®æŽ§åˆ¶è¢«ååºåˆ—åŒ–çš„å†…å®¹å’Œè¢«è°ƒç”¨çš„è‡ªé€‚åº”çš„å†…å®¹ã€‚ä¸å¹¸çš„æ˜¯ï¼Œpickleå’Œcpickleæ˜¯ä¸ä¸€æ ·çš„
 
-ÔÚpickleÄ£¿éÖÐ£¬ÄãÐèÒªµÃµ½unpickleµÄÖ®Àà£¬ÖØÔØload_global()·½·¨¡£load_global()ÐèÒª¶ÁÈ¡Á½ÐÐpickle dataÁ÷£¬µÚÒ»ÐÐÊÇÄ£¿é°üº¬µÄÀàµÄÃû×Ö£¬µÚ¶þÐÐÊÇÊµÀýµÄÃû×Ö¡£È»ºó»á²éÕÒÕâ¸öÀà£¬¿ÉÄÜ»áµ¼ÈëÄ£¿é²éÃ÷ÊôÐÔ£¬¼ÓÈëµ½·´ÐòÁÐ»¯µÄÕ»ÖÐ¡£È»ºó£¬Õâ¸öÀà½«»á±»±êÃ÷³É__class__ÊôÐÔÎª¿ÕÀà£¬×Ô¶¯µÄ´´ÔìÒ»¸öÊµÀý¶ø²»ÊÇµ÷ÓÃÀàµÄ__init__()³õÊ¼»¯·½·¨¡£ÄãÐèÒª½«load_global()·½·¨pushµ½·´ÐòÁÐ»¯Õ»ÖÐ£¬Ñ¡Ò»¸öÒÑÖª°²È«µÄ°æ±¾È¥·´ÐòÁÐ»¯¡£ÕâÈ¡¾öÒÔÄãÈçºÎ¹¹ÔìÕâ¸öÀà¡£»òÕßÄã¿ÉÒÔraiseÒ»¸ö´íÎóÈç¹ûÄã²»ÏëÔÊÐí·´ÐòÁÐ»¯ËùÓÐµÄÊµÀý¡£
+åœ¨pickleæ¨¡å—ä¸­ï¼Œä½ éœ€è¦å¾—åˆ°unpickleçš„ä¹‹ç±»ï¼Œé‡è½½load_global()æ–¹æ³•ã€‚load_global()éœ€è¦è¯»å–ä¸¤è¡Œpickle dataæµï¼Œç¬¬ä¸€è¡Œæ˜¯æ¨¡å—åŒ…å«çš„ç±»çš„åå­—ï¼Œç¬¬äºŒè¡Œæ˜¯å®žä¾‹çš„åå­—ã€‚ç„¶åŽä¼šæŸ¥æ‰¾è¿™ä¸ªç±»ï¼Œå¯èƒ½ä¼šå¯¼å…¥æ¨¡å—æŸ¥æ˜Žå±žæ€§ï¼ŒåŠ å…¥åˆ°ååºåˆ—åŒ–çš„æ ˆä¸­ã€‚ç„¶åŽï¼Œè¿™ä¸ªç±»å°†ä¼šè¢«æ ‡æ˜Žæˆ__class__å±žæ€§ä¸ºç©ºç±»ï¼Œè‡ªåŠ¨çš„åˆ›é€ ä¸€ä¸ªå®žä¾‹è€Œä¸æ˜¯è°ƒç”¨ç±»çš„__init__()åˆå§‹åŒ–æ–¹æ³•ã€‚ä½ éœ€è¦å°†load_global()æ–¹æ³•pushåˆ°ååºåˆ—åŒ–æ ˆä¸­ï¼Œé€‰ä¸€ä¸ªå·²çŸ¥å®‰å…¨çš„ç‰ˆæœ¬åŽ»ååºåˆ—åŒ–ã€‚è¿™å–å†³ä»¥ä½ å¦‚ä½•æž„é€ è¿™ä¸ªç±»ã€‚æˆ–è€…ä½ å¯ä»¥raiseä¸€ä¸ªé”™è¯¯å¦‚æžœä½ ä¸æƒ³å…è®¸ååºåˆ—åŒ–æ‰€æœ‰çš„å®žä¾‹ã€‚
 	
-cpickleÄ£¿é»á¸üÇå³þ¡£Äã¿ÉÒÔÉèÖÃfind_globalÊôÐÔÎªº¯Êý»òÕßNoneÀ´¿ØÖÆ·´ÐòÁÐ»¯¡£Èç¹ûÉèÖÃÎªNone£¬·´ÐòÁÐ»¯ÊµÀý»áraiseÒ»¸öUnpicklingError¡£Èç¹ûÊÇÒ»¸öº¯Êý£¬ÄÇÃ´¾Í»á½ÓÊÜÒ»¸öÄ£¿éÃû»òÕßÊÇÒ»¸öÀàÃû£¬¶øÇÒ·µ»ØÏàÓ¦µÄÀà¶ÔÏó¡£²éÕÒ±ØÒªµÄÀà»òÕßµ¼Èë°üÊÇÖØÒªµÄ£¬¶øÇÒ¿ÉÄÜ»áÉú³É´íÎóÔÚ·´ÐòÁÐ»¯ÊµÀýÀàÊ±¡£
+cpickleæ¨¡å—ä¼šæ›´æ¸…æ¥šã€‚ä½ å¯ä»¥è®¾ç½®find_globalå±žæ€§ä¸ºå‡½æ•°æˆ–è€…Noneæ¥æŽ§åˆ¶ååºåˆ—åŒ–ã€‚å¦‚æžœè®¾ç½®ä¸ºNoneï¼Œååºåˆ—åŒ–å®žä¾‹ä¼šraiseä¸€ä¸ªUnpicklingErrorã€‚å¦‚æžœæ˜¯ä¸€ä¸ªå‡½æ•°ï¼Œé‚£ä¹ˆå°±ä¼šæŽ¥å—ä¸€ä¸ªæ¨¡å—åæˆ–è€…æ˜¯ä¸€ä¸ªç±»åï¼Œè€Œä¸”è¿”å›žç›¸åº”çš„ç±»å¯¹è±¡ã€‚æŸ¥æ‰¾å¿…è¦çš„ç±»æˆ–è€…å¯¼å…¥åŒ…æ˜¯é‡è¦çš„ï¼Œè€Œä¸”å¯èƒ½ä¼šç”Ÿæˆé”™è¯¯åœ¨ååºåˆ—åŒ–å®žä¾‹ç±»æ—¶ã€‚
 	
 	
-## ²Î¿¼
+## å‚è€ƒ
 
-* [python2.7¹Ù·½ÎÄµµ](https://docs.python.org/2.7/library/pickle.html#what-can-be-pickled-and-unpickled)
-* [python3ÎÄµµ](https://docs.python.org/3/library/pickle.html#module-pickle)
-* [python3ÎÄµµ2](http://docspy3zh.readthedocs.io/en/latest/library/pickle.html?highlight=pickle)
+* [python2.7å®˜æ–¹æ–‡æ¡£](https://docs.python.org/2.7/library/pickle.html#what-can-be-pickled-and-unpickled)
+* [python3æ–‡æ¡£](https://docs.python.org/3/library/pickle.html#module-pickle)
+* [python3æ–‡æ¡£2](http://docspy3zh.readthedocs.io/en/latest/library/pickle.html?highlight=pickle)
 * [python3cookbook](http://python3-cookbook.readthedocs.io/zh_CN/latest/c05/p21_serializing_python_objects.html)
-* [ibm¿ª·¢ÎÄµµ](https://www.ibm.com/developerworks/cn/linux/l-pypers/)
-* [python·­Òë](http://pyzh.readthedocs.io/en/latest/python-magic-methods-guide.html#pickling)
+* [ibmå¼€å‘æ–‡æ¡£](https://www.ibm.com/developerworks/cn/linux/l-pypers/)
+* [pythonç¿»è¯‘](http://pyzh.readthedocs.io/en/latest/python-magic-methods-guide.html#pickling)
 
 
 
