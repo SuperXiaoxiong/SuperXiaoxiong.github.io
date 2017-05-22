@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  python2 序列化pickle模块
 date: 2017-05-18 12:20:56
