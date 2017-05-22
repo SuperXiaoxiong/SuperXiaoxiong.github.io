@@ -192,36 +192,31 @@ t.test()
 ```
 
 
-注意：在反序列化时，那个实例的一些方法， __getattr__(),__getattribute__()，__setattr__()会被调用在这种情况下方法历来与一些外部的不变量是正确的，这些类型需要实现__getinitargs__(),__getnewargs__()去建立一个不变量，否则，将不会调用__new__()和__init__（）这些方法
+注意：在反序列化时，那个实例的一些方法， ```__getattr__()```,```__getattribute__()```,```__setattr__()```会被调用在这种情况下方法历来与一些外部的不变量是正确的，这些类型需要实现```__getinitargs__()```,```__getnewargs__()```去建立一个不变量，否则，将不会调用```__new__()```和```__init__()```这些方法
 
-###object.__reduce__()
+### object.__reduce__()
 	
-实现```__reduce__()```方法,可以更有效和明确的序列化。在序列化的时候会无参调用__reduce__()方法，而且必须返回一个字符串或者是元组。
+实现```__reduce__()```方法,可以更有效和明确的序列化。在序列化的时候会无参调用```__reduce__()```方法，而且必须返回一个字符串或者是元组。
 	
-返回值是一个代表全局名称的字符串，Python会查找并pickle。
+返回值是一个代表全局名称的字符串，```Python```会查找并```pickle```。
 	
-返回值是一个元组，必须是2到5个元素。可选元素可以被删除，None也可以被当做值。元组的内容被正常的序列化。
+返回值是一个元组，必须是2到5个元素。可选元素可以被删除，```None```也可以被当做值。元组的内容被正常的序列化。
 	
 元组的元素定义：
 
-1. 一个可以被调用的对象(类)，重建时使用(python2中要求 被注册调用的安全构造器或者必须有__safe_for_unpickling__为真的反序列化属性。否则，将会raise一个UnpicklingError。); 
+1. 一个可以被调用的对象(类)，重建时使用(python2中要求 被注册调用的安全构造器或者必须有```__safe_for_unpickling__```为真的反序列化属性。否则，将会raise一个UnpicklingError。); 
 
 2. 参数元组，供对象重建时调用(如果不接收参数是一个空元组); 
 		
-3. 对象的状态，将会被传到__setstate__()方法。如果这个对象没有__setstate__()方法，这个值必须是一个字典，而且会被加入对象的__dict__(可选)
+3. 对象的状态，将会被传到```__setstate__()```方法。如果这个对象没有```__setstate__()```方法，这个值必须是一个字典，而且会被加入对象的```__dict__```(可选)
 		
-4. 一个产生列表元素的迭代器对象, 用append(item)或者extend(list_of_items)加入这个对象。列举子类是很重要，但是也可以用作其他类，只要有append（）和extend（）的方法(可选)
+4. 一个产生列表元素的迭代器对象, 用```append(item)```或者```extend(list_of_items)```加入这个对象。列举子类是很重要，但是也可以用作其他类，只要有```append（）```和```extend（）```的方法(可选)
 		
-5. 一个产生字典元素的迭代器对象，(key, value)会成为obj[key] = value.可以用来作为字典子类，实现了__setitem__()的类也可以用(可选)
+5. 一个产生字典元素的迭代器对象，```(key, value)```会成为```obj[key] = value```可以用来作为字典子类，实现了```__setitem__()```的类也可以用(可选)
 		
 ### object.__reduce_ex__(protocol)
 
-__reduce_ex__ 的存在是为了兼容性。如果它被定义，在pickle时 __reduce_ex__ 会代替 __reduce__ 被调用。 __reduce__ 也可以被定义，用于不支持 __reduce_ex__ 的旧版pickle的API调用。
-	
-还有一个可选的方式去实现__reduce__()在对象呗序列化的时候，用copy_reg 注册一个可以被调用的模块。这个模块提供程序去注册reduction functions和用户自定义构造器的方式。Reduction 功能提供了相同的语义功能和结构作为__reduce__()方法描述，出了被使用单个参数调用，
-
-注册的构造器被视为安全的构造器在反序列化时候
-
+__reduce_ex__ 的存在是为了兼容性。如果它被定义，在```pickle```时```__reduce_ex__```会代替```__reduce__```被调用。```__reduce__```也可以被定义，用于不支持```__reduce_ex__```的旧版pickle的API调用。
 
 ## 限制全局变量
 
@@ -301,14 +296,7 @@ cpickle模块会更清楚。你可以设置find_global属性为函数或者None来控制反序列化。如果
 * [python3cookbook](http://python3-cookbook.readthedocs.io/zh_CN/latest/c05/p21_serializing_python_objects.html)
 * [ibm开发文档](https://www.ibm.com/developerworks/cn/linux/l-pypers/)
 * [python翻译](http://pyzh.readthedocs.io/en/latest/python-magic-methods-guide.html#pickling)
-* [python pickle漏洞1](http://www.freebuf.com/articles/system/89165.html)
-* [python pickle漏洞2](https://www.leavesongs.com/PENETRATION/zhangyue-python-web-code-execute.html)
-* [python pickle漏洞3](https://xianzhi.aliyun.com/forum/mobile/read/1429.html)
-* [python pickle漏洞4](http://www.vuln.cn/8094)
 
-
-
-https://www.crazydb.com/archive/Java%E3%80%81PHP%E3%80%81Python%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E9%97%AE%E9%A2%98
 
 
 
