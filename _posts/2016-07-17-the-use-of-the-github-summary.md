@@ -39,7 +39,7 @@ Git服务程序的使用分为Git工作流程、Git配置信息、Git提交数�
 
 Git需要把文件提交到Git数据库中来保存数据
 
-![Git工作流程图](https://github.com/SuperXiaoxiong/SuperXiaoxiong.github.io/blob/master/img/2016-07-13-Git%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
+![Git工作流程图](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/2016-07-13-Git%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 
 * 将修改的文件快照提交到暂存区域
 
