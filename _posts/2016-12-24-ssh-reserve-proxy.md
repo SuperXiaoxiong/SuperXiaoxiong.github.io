@@ -23,18 +23,17 @@ tags:  ssh proxy
 
 ### 背景说明：
 
-需要局域网不同(lan1, lan2)的两个用户(user1, user2)能够通过一个公网服务器互连(user3, server)，
+需要从不同局域网访问局域网lan1中的用户user1，通过一个公网服务器进行流量转发user2@server
  
-user1@lan1
+### user1反向连接
 
-user2@server
-
-### user1连接公网
-
+![反向连接代理图](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/SSH_R2.PNG)
 
 ```
 user1@lan1:$ ssh -NfR 20002:localhost:22 user2@server
 ```
+
+这样访问user2@server:20002 就相当于访问user1@lan1:22
 
 参数解释：
 
@@ -46,7 +45,8 @@ N 和 R 通常共同使用
 
 ### 使用公私钥登录
 
-使用 ```ssh-keygen```生成公私钥
+
+使用```ssh-keygen```生成公私钥
 
 复制 内网主机上的公钥到外网主机
 
@@ -68,39 +68,43 @@ seLinus 关闭
 autossh -M 5678 -NfR 20001:localshost:22 user2@server
 ```
 
- ```-M 5678```表示通过 5678端口监视连接状态，连接有问题就会自动重载，
-
-
-
+参数 ```-M 5678```表示通过 5678端口监视连接状态，连接有问题就会自动重载，
 
 ## ssh 端口转发
 
 ### 本地转发(-L)
 
+![本地转发图](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/SSH_L.PNG)
+
+命令说明，在host_A上执行
+
 ```
-ssh -L [<local host>]:<local port>:<remote host>:<remote port> <SSH hostname>
-举例: ssh -L <A>:<A_port>:<B>:<B_port> <c>
+ssh -L <local port>:<remote host>:<remote port> <SSH hostname>
+举例: ssh -L <A_port>:<C>:<C_port> <B>
 -g 可以指定它与其他机器共享本地端口转发
 ```
 
-将本地端口的消息 通过 ```ssh hostname``` 转发到远程主机和端口，```local host /A``` 可以省略
+访问A_port,将流量通过B转发到C:C_port,当把C设置成```localhost```表示表示访问B:B_port;然后流量再原路返回。
 
-这种情况适合A是局域网地址，B和C 都具有公网地址的情况
-
+B为SSH Server，A为Client，所以A必须可以访问到B。
 
 
 ### 远程转发(-R)
 
-命令说明
+![远程转发图](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/SSH_R.PNG)
+
+访问C:C_port,经过B转发，可以访问到A:A_port
+
+命令说明,在host_A上执行
 
 ```
-ssh -R <local port>:<remote host>:<remote port> <SSH hostname>
-ssh -R 9090:host_B:port_B C
+ssh -R <remote port>:<destinative host>:<destinative port> <SSH hostname>
+ssh -R 9090:host_C:port_C B
 ```
 
-这样访问 C:9090就等同与本机访问B:port_B;(表示很多博客写的模棱两可,)
+B监听9090端口,这样访问 B:9090就等同通过A访问C:port_C
 
-如果B设置为localhost就可以从外网访问本机的port_B, 在反向代理时经常使用
+如果C设置为localhost就等同访问A:port_A,在反向代理时经常使用
 
 ### 动态转发(-D)
 
@@ -122,4 +126,6 @@ ssh -qTfnN -D 7070 -p 22 user@host
 动态转发无需再指定远程主机及其端口。它们由通过 SOCKS协议 连接到本地主机端口的那个主机
 
 
+## 参考
 
+* [ibm实战 SSH 端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/index.html)
