@@ -74,7 +74,7 @@ autossh -M 5678 -NfR 20001:localshost:22 user2@server
 
 ### 本地转发(-L)
 
-![本地转发图](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/SSH_L.PNG)
+![本地转发图](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/SSH_L.png)
 
 命令说明，在host_A上执行
 
