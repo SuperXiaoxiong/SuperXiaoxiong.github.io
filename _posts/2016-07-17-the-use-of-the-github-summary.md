@@ -168,7 +168,8 @@ git tag 							//查看已有标签
 git tag v<tagname>					//给最近的记录打上标签
 git show v<tagname>					//显示此标签的详细信息
 git tag -a v <tagname> -m <msg>   	//带有说明的标签  用-a指定标签名，-m指定说明文字：
-git tag -d v1.0   					//删除标签
+git tag -d v1.0   					//删除标签
+git checkout -b <branchname> <tagname>    //为tagname 新建并切换到branchname
 ```
 
 
