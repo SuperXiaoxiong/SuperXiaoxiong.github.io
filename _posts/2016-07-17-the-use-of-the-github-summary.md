@@ -81,6 +81,13 @@ git config --global user.email "用户邮箱"
 ```
 
 其中有 --system、 --global、 --local、 --file <filename> 选项，默认是--local：此仓库的本地配置， global对应当前用户， system此系统
+	
+配置代理
+
+```
+git config --global http.proxy "代理地址"
+git config --global https.proxy "代理地址"
+```
 
 ### Git提交数据
 
