@@ -43,6 +43,24 @@ user1@lan1:$ ssh -NfR 20002:localhost:22 user2@server
 
 N 和 R 通常共同使用
 
+### 实例运用
+
+我需要在外网访问本地虚拟机ubuntu的8080端口
+
+	1. 在公网server /etc/ssh/sshd_config文件下添加
+	2. GatewayPorts yes   //这个作用是把转发的端口绑定在0.0.0.0的接口上，让外部地址也可以访问
+	3. 重启sshd: sudo service ssh restart
+	4. 在虚拟机上 ssh -NfR 20002:localhost:8080 user2@server
+	5. 虚拟机查看 进程 netstat -atpn ，需要关闭进程 kill 对应进程号
+
+在外网访问本地虚拟机windows的8080端口
+	
+	1. xshell ssh登上目标服务器
+	2. 菜单栏选中 查看， 再勾选 隧道窗格
+	3. 隧道窗格 切换到 转移规则 页面
+	4. 添加 类型：Remote(incoming) ，源主机：公网server， 监听端口：20002， 目标主机：localhost，目标端口:8080
+	5. 状态显示 打开（等待几秒，开始可能是等待）
+
 ### 使用公私钥登录
 
 
