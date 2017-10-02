@@ -8,8 +8,8 @@
 # Site settings
 encoding: UTF-8
 
-title: 肖雄的博客
-brief-intro: 一直在努力
+title: xiaoxiong's blog
+brief-intro: Thinking and Action
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://superxiaoxiong.github.io/" # the base hostname & protocol for your site
 
@@ -25,13 +25,13 @@ email: knight110_2016@foxmail.com
 #linkedIn_username: superxiaoxiong
 #dribbble_username: 
 
-description_footer: 本站记录我学习之旅！
+description_footer: 
 
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: spxxblog
-disqus_shortname: #gaohaoyang
+#duoshuo_shortname: spxxblog
+#disqus_shortname: #gaohaoyang
 
 # statistic analysis 统计代码
 # 百度统计 id，将统计代码替换为自己的百度统计id，即
