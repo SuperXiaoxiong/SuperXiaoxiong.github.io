@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  wordpress 格式化字符串注入
-date: 2017-10-31
+date: 2017-11-2
 categories: 漏洞分析
 tags:  php sql注入
 ---
