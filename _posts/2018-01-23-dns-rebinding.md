@@ -12,14 +12,15 @@ tags:  同源策略 javascript
 
 
 
-
-## 说明
-
-安全客发布地址[https://www.anquanke.com/post/id/97366](https://www.anquanke.com/post/id/97366)
-
 ## CVE-2018-5702 通过DNS rebinding绕过同源策略攻击Transmission分析
 
 Transmission 是一种BitTorrent客户端，这款BT下载软件开放源码、接口简洁、有效且支持多平台，默认情况下只对本地请求进行处理。但是Google安全研究员提交了一个通过DNS重绑定绕过同源策略攻击类似软件架构的方法。以下是对这种攻击手段的一点分析
+
+
+
+
+
+
 
 
 
@@ -330,3 +331,6 @@ nginx 添加设置 实例
 5. [web浏览器缓存文章](https://dyn.com/blog/web-browser-dns-caching-bad-thing/)
 
 
+## 转载链接
+
+安全客发布地址[https://www.anquanke.com/post/id/97366](https://www.anquanke.com/post/id/97366)
