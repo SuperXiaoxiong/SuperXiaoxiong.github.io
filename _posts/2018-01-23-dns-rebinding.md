@@ -11,8 +11,9 @@ tags:  同源策略 javascript
 {:toc}
 
 
+## CVE-2018-5702 简要介绍
 
-## CVE-2018-5702 通过DNS rebinding绕过同源策略攻击Transmission分析
+通过DNS rebinding绕过同源策略攻击Transmission分析
 
 Transmission 是一种BitTorrent客户端，这款BT下载软件开放源码、接口简洁、有效且支持多平台，默认情况下只对本地请求进行处理。但是Google安全研究员提交了一个通过DNS重绑定绕过同源策略攻击类似软件架构的方法。以下是对这种攻击手段的一点分析
 
