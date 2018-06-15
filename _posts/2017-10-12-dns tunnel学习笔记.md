@@ -1,26 +1,28 @@
 ---
 layout: post
-title:  dns tunnel 学习笔记
+title:  DNS tunnel 检测学习笔记
 date: 2017-10-27
 categories: 工具介绍
 tags:  病毒分析
 ---
 
+
 * content
 {:toc}
 
+## 简要介绍
 
-[dns隧道](http://www.freebuf.com/articles/network/149328.html),这是一篇学习笔记
-
-
-
+关于[dns隧道检测](http://www.freebuf.com/articles/network/149328.html) 的学习笔记
 
 
 
 
 
 
-## 
+
+
+
+## DNS 隧道检测
 
 看了很多篇有关dns隧道网文，决定从以下几个方面来分析一下dns隧道
 
