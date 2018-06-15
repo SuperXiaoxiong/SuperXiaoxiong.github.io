@@ -1,5 +1,3 @@
-# dns tunnel学习笔记
-
 ---
 layout: post
 title:  dns tunnel 学习笔记
@@ -13,6 +11,10 @@ tags:  病毒分析
 
 
 [dns隧道](http://www.freebuf.com/articles/network/149328.html),这是一篇学习笔记
+
+
+
+
 
 
 
