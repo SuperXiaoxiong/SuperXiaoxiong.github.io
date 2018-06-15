@@ -1,6 +1,22 @@
 # dns tunnel学习笔记
 
-老大推荐了一篇[dns隧道](http://www.freebuf.com/articles/network/149328.html)检测文章，这是一篇学习笔记
+---
+layout: post
+title:  dns tunnel 学习笔记
+date: 2017-10-27
+categories: 工具介绍
+tags:  病毒分析
+---
+
+* content
+{:toc}
+
+
+[dns隧道](http://www.freebuf.com/articles/network/149328.html),这是一篇学习笔记
+
+
+
+
 
 ## 
 
