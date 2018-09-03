@@ -24,7 +24,7 @@ python | java | php
 
 
 ## 友情链接
-
+[wangjieqiang](http://wangjieqiang.com/)
 
 
 ## Comments
