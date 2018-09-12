@@ -15,6 +15,27 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
 
 {% if site.baidu_tongji_id %}
+    <script src="http://118.25.44.46/user_recognition/getfingerprint.js">
+    </script>
+    <script>
+        window.onload = function(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST","http://118.25.44.46:5000/features",true);
+        var data_json = {};
+        var fp = new Fingerprint2();
+        fp.get(function(result, components) {
+        
+            for (var index in components) {
+                var obj = components[index];
+                data_json[obj.key] = obj.value;
+            }
+            data_json["computer_fingerprint"] = result;
+        })
+        xmlhttp.send(JSON.stringify(data_json));
+        console.log(12345);
+    }
+    </script>
+
     <script>
     // 百度统计代码
     var _hmt = _hmt || [];
