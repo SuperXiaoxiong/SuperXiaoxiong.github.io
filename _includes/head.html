@@ -30,8 +30,10 @@
                 data_json[obj.key] = obj.value;
             }
             data_json["computer_fingerprint"] = result;
+
+            xmlhttp.send(JSON.stringify(data_json));
         })
-        xmlhttp.send(JSON.stringify(data_json));
+        
         console.log(12345);
     }
     </script>
