@@ -15,12 +15,12 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
 
 {% if site.baidu_tongji_id %}
-    <script src="https://itstudy.spxx.tk/user_recognition/getfingerprint.js">
+    <script src="/js/getfingerprint.js">
     </script>
     <script>
         window.onload = function(){
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST","http://118.25.44.46:5000/features",true);
+        xmlhttp.open("POST","https://itstudy.spxx.tk/features",true);
         var data_json = {};
         var fp = new Fingerprint2();
         fp.get(function(result, components) {
