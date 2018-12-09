@@ -1,4 +1,4 @@
-# Here [SuperXiaoXiong](https://raw.githubusercontent.com/SuperXiaoxiong/SuperXiaoxiong.github.io/master/img/discuz.jpg)
+# Here [SuperXiaoXiong](https://superxiaoxiong.github.io/)
 
 # Abstract
 
@@ -13,3 +13,4 @@ This is my personal blog, **It's used to recording knowledge that I learn**. The
 * _site 		jekyll默认的存放转换结果的目录
 * assets		存放样式、脚本、图片等文件
 
+一篇有关Ruby，jekyll模板搭建的文章
