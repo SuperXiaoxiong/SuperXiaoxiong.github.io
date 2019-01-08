@@ -281,7 +281,7 @@ git pull [options] [<repository> [<refspec>…?]]
 
 以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动
 
-### gitignore 文件说明
+## gitignore 文件说明
 
 在Git工作区的根目录下创建.gitignore文件，Git会自动忽略.gitignore中的文件
 
