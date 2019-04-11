@@ -353,6 +353,87 @@ def log(f):
     return wrapper
 ```
 
+### 小例子
+
+以下代码是一个监视文件小demo，如果文件发生了变化，则push到git服务器中
+
+```
+import re
+import os
+import pyinotify
+import functools
+
+# The watch manager stores the watches and provides operations on watches
+wm = pyinotify.WatchManager()
+
+#mask = pyinotify.IN_DELETE | pyinotify.IN_CREATE | pyinotify.IN_MODIFY # watched events, modify file will create first,
+mask = pyinotify.IN_DELETE | pyinotify.IN_MODIFY
+
+#注解ignore_keywords和handle_git对传入参数进行处理，忽略.git 目录变化，忽略 .开头， ~文件结尾，4913 文件变化。
+#可以将两个注解合并成一个，handle_git演示调用函数后，ignore_keywords演示调用函数前
+def ignore_keywords(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kw):
+        if '.git' in args[1].pathname:
+            return f(*args, **kw)
+        else:
+            filename = os.path.split(args[1].pathname)[1]
+            p = re.compile('(^\.)|(.*~$)|(^4913$)')
+            if(p.match(filename)):
+                return f(*args, **kw)
+            else:
+                print("%s : %s" %(args[1].maskname, args[1].pathname))
+                return f(*args, **kw)
+    return wrapper
+
+
+def handle_git(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kw):
+        if '.git' in args[1].pathname:
+            return f(*args, **kw)
+        else:
+            filename = os.path.split(args[1].pathname)[1]
+            p = re.compile('(^\.)|(.*~$)|(^4913$)')
+            if(p.match(filename)):
+                return f(*args, **kw)
+            else:
+                back = f(*args, **kw)
+                os.system('cd /workhome && git add --all . && git commit -m "update" && git push origin master')
+                return back
+    return wrapper
+
+class EventHandler(pyinotify.ProcessEvent):
+
+    @ignore_keywords
+    @handle_git
+    def process_IN_CREATE(self, event):
+        pass
+
+    @ignore_keywords
+    @handle_git
+    def process_IN_DELETE(self, event):
+        pass
+
+    @ignore_keywords
+    @handle_git
+    def process_IN_MODIFY(self, event):
+	    pass
+
+handler = EventHandler()
+notifier = pyinotify.Notifier(wm, handler, read_freq=60)
+#read_freq选取60s（每次检查文件变化延迟60s），并不是实时监控，担心git push 网络延迟造成影响。
+
+wdd = wm.add_watch('/workhome', mask, rec=True)
+
+notifier.loop()
+```
+
+TODO：
+
+1. 从git服务器中pull文件，保持最新
+2. 修改多个文件会进行多次 git 请求（第一次会将所有modify push，但依然会进行多次git push 操作），实际上只需要一次
+
 ## 参考
 
 参考imooc python进阶
