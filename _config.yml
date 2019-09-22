@@ -11,7 +11,7 @@ encoding: UTF-8
 title: xiaoxiong's blog
 brief-intro: Thinking and Action
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://superxiaoxiong.github.io/" # the base hostname & protocol for your site
+url: "https://superxiaoxiong.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 

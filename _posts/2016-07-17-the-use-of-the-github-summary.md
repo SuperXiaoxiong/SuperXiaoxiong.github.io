@@ -203,9 +203,27 @@ git merge 分支名				//将指定分支与当前所在分支合并
 
 ## Github以及远程仓库管理的使用
 
-Github以及远程仓库管理的使用分为添加密钥、仓库管理，在提交到Github远程仓库保管时，一种是使用账号密码登录，还有一种便是使用RSA密钥登录
+Github以及远程仓库管理的使用分为添加密钥、仓库管理，在提交到Github远程仓库保管时，一种是使用账号密码登录，还有一种便是使用ssh密钥登录
 
-### 添加密钥
+账号密码/ssh密钥体现在使用的链接不同。可以在clone时选择，本地使用git remote -v 进行查看
+
+```
+https://github.com/SuperXiaoxiong/SuperXiaoxiong.github.io.git   //账号密码
+git@github.com:SuperXiaoxiong/SuperXiaoxiong.github.io.git       //ssh 密钥
+```
+
+#### 账号密码
+
+在本地项目 .git/config 配置文件中添加
+
+```
+[credential]  
+    helper = store
+```
+
+保存，输入一次账号密码后就会记住账号密码
+
+#### 添加密钥
 
 生成密钥对
 
@@ -263,6 +281,26 @@ git pull [options] [<repository> [<refspec>…?]]
 
 以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动
 
+## gitignore 文件说明
+
+在Git工作区的根目录下创建.gitignore文件，Git会自动忽略.gitignore中的文件
+
+[Git官方gitignore示例](https://github.com/github/gitignore)
+
+Git忽略文件的原则
+
+-  忽略操作系统自动生成的文件，比如缩略图等；
+-  忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；
+-  忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
+
+[gitignore忽略规则](https://www.cnblogs.com/kevingrace/p/5690241.html)
+
+注意：gitignore只会忽略untracked的文件，如果文件已经被纳入了版本管理中，只修改.gitignore是无效的。解决方法是先把本地缓存删除，然后再提交。
+
+```
+git rm -r --cached .  //删除所有缓存
+git rm --cached logs/xx.log   //删除单个缓存
+```
 
 
 ## 参考

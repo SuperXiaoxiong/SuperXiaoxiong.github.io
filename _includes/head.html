@@ -17,24 +17,7 @@
 {% if site.baidu_tongji_id %}
     <script src="/js/getfingerprint.js">
     </script>
-    <script>
-    window.onload = function(){
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST","http://127.0.0.1:5000/features",true);
-    var data_json = {};
-    var fp = new Fingerprint2();
-    fp.get(function(result, components) {
-       
-        for (var index in components) {
-            var obj = components[index];
-            data_json[obj.key] = obj.value;
-        }
-        data_json["computer_fingerprint"] = result;
-    xmlhttp.send(JSON.stringify(data_json));
-    })
-    console.log(12345);
-    }
-    </script>
+
     <script>
     // 百度统计代码
     var d1 = new Date();
