@@ -26,6 +26,19 @@ tags:  HTTP
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 什么是 HTTP 请求 smuggling
 
 HTTP request smuggling 是一项用于干扰HTTP 请求的技术，网站会处理来自用户的多个 HTTP 请求，使用 request smuggling 可以干扰其他用户的请求。 请求 smuggling 漏洞在实践场景中经常发生，允许攻击者绕过控制，获得未授权的数据，并且直接攻陷应用的其他用户
