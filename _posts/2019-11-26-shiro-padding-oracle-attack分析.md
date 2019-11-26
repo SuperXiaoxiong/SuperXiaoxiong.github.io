@@ -11,7 +11,7 @@ tags:  HTTP
 
 ## 简述
 
-自九月 loopx9 在 apache jira 平台上提交漏洞之后就分析了两周，从 [Padding Oracle  Attack 攻击原理](http://netifera.com/research/)，到 shiro 历史漏洞 [SHIRO-550 反序列化利用](https://issues.apache.org/jira/browse/SHIRO-550) ，在有且仅有[有限的消息的情况下](https://issues.apache.org/jira/browse/SHIRO-721)一度认为这是一个假漏洞，直至最后有POC 公布，才恍然大悟，原来在漏洞验证中还有 java 反序列化的 一个技巧，其他的分析文章中却决口不提，也不知道只是拿着 POC 打了一遍，还是大佬们想保留秘密。
+自九月 loopx9 在 apache jira 平台上提交漏洞之后就分析了两周，从 [Padding Oracle  Attack 攻击原理](http://netifera.com/research/)，到 shiro 历史漏洞 [SHIRO-550 反序列化利用](https://issues.apache.org/jira/browse/SHIRO-550) ，在有且仅有[有限的消息的情况下](https://issues.apache.org/jira/browse/SHIRO-721)一度认为这是一个假漏洞，直至最后有POC 公布，才恍然大悟，原来在漏洞验证中还有 java 反序列化的 一个技巧，其他的分析文章中却绝口不提，也不知道只是拿着 POC 打了一遍，还是大佬们想保留秘密。
 
 
 
