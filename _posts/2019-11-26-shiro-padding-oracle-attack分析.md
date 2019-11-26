@@ -21,9 +21,11 @@ tags:  HTTP
 
 ## PADDING ORACLE ATTACK 
 
-Padding ORACLE 攻击相关理论知识可以看文献 [http://netifera.com/research](http://netifera.com/research/), 中文讲解 [http://blog.zhaojie.me/2010/10/padding-oracle-attack-in-detail.html](http://blog.zhaojie.me/2010/10/padding-oracle-attack-in-detail.html) 
+详细清楚的 Padding ORACLE 攻击相关理论知识可以看文献 [http://netifera.com/research](http://netifera.com/research/), 中文讲解 [http://blog.zhaojie.me/2010/10/padding-oracle-attack-in-detail.html](http://blog.zhaojie.me/2010/10/padding-oracle-attack-in-detail.html) 
 
-其中有一个重要的理论基础：Padding Oracle 攻击是应用/服务 AES 密文 在 Padding 不对时能够有明显的区别，通过 Padding 是否正确推断出中间值（每组中间值只和密文一一对应），反之求得在确定明文的初始向量。
+说明：  
+
+其中有一个重要的理论基础：Padding Oracle 攻击是应用/服务 AES 密文 在 Padding（格式） 不对 时能够有明显的区别，通过 Padding 是否正确推断出中间值（每组中间值只和密文一一对应），这样就可以在不用知道 AES 密钥时，构造密文，使之解密为我们想要的明文。
 
 文章 [http://blog.zhaojie.me/2010/10/padding-oracle-attack-in-detail.html](http://blog.zhaojie.me/2010/10/padding-oracle-attack-in-detail.html) 用例场景是
 
@@ -45,7 +47,7 @@ shiro 使用 CookieRememberMeManager 处理 rememberme 参数
 2. 使用 AES 解密
 3. 反序列化解密后的字符串
 
-在 1.25 版本以前，使用硬编码存储 AES 密钥，这样就可以构造任意字符串，反序列化 POC， 造成 RCE，或者伪造任意用户
+在 1.25 版本以前，使用硬编码存储 AES 密钥，AES 是对称加密算法，拥有密钥之后，通过更改 RememberMe Cookie 值 可以为所欲为。
 
 ## SHIRO-721
 
@@ -53,12 +55,12 @@ shiro 使用 CookieRememberMeManager 处理 rememberme 参数
 
 来表达一下为什么我最初判断是假漏洞：
 
-oracle padding 攻击是利用侧信道的方式对加密块数据进行渗出
+Oracle Padding 攻击是利用侧信道的方式对加密块数据进行渗出
 
 需要条件：
 padding 对，响应1
 padding 不对，响应2
-通过 响应1和响应2 返回不同来区分padding 是否正确
+通过 响应1和响应2 返回不同来区分 padding 是否正确
 
 
 调试代码
