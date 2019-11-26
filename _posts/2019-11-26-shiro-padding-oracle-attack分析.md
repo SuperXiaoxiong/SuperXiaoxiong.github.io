@@ -57,9 +57,9 @@ shiro 使用 CookieRememberMeManager 处理 rememberme 参数
 
 Oracle Padding 攻击是利用侧信道的方式对加密块数据进行渗出
 
-需要条件：
-padding 对，响应1
-padding 不对，响应2
+需要条件：  
+padding 对，响应1  
+padding 不对，响应2  
 通过 响应1和响应2 返回不同来区分 padding 是否正确
 
 
