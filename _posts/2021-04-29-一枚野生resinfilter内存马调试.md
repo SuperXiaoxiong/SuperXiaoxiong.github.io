@@ -4,7 +4,7 @@ title:  一枚野生resin filter内存马调试
 date: 2021-04-29
 categories: 样本调试
 excerpt: 在对[java恶意样本调试指南]公众号中发布的jsp内存马进行分析之后，发现是一枚野生的`resin filter`内存马，做为面向`github` 编程的我，还没有找到公开的`resin`内存马，决定细细的盘一下该内存马的逻辑部分。 
-tags:  内存马 resin JAVA
+tags: 内存马 resin JAVA
 ---
 
 * content

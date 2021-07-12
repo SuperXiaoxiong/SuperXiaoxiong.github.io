@@ -3,7 +3,8 @@ layout: post
 title:  DNS tunnel 检测学习笔记
 date: 2017-10-27
 categories: 工具介绍
-tags:  病毒分析
+excerpt: DNS tunnel 检测学习笔记
+tags: 病毒分析
 ---
 
 
@@ -13,12 +14,6 @@ tags:  病毒分析
 ## 简要介绍
 
 关于[dns隧道检测](http://www.freebuf.com/articles/network/149328.html) 的学习笔记
-
-
-
-
-
-
 
 
 

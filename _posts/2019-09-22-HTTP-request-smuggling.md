@@ -3,7 +3,8 @@ layout: post
 title:  http_request_smuggling 翻译
 date: 2019-09-22
 categories: 漏洞分析
-tags:  HTTP
+excerpt: 一篇水文，这篇文章主要描述 HTTP request smuggling 攻击 和 smuggling 攻击是如何产生的。 
+tags: HTTP
 ---
 
 * content
@@ -14,28 +15,6 @@ tags:  HTTP
 翻译：https://portswigger.net/web-security/request-smuggling
 
 这篇文章主要描述 HTTP request smuggling 攻击 和 smuggling 攻击是如何产生的
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
