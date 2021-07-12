@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 .vscode
 _posts/2015-*
+.jekyll-cache
+.DS_Store
+*/.DS_Store
