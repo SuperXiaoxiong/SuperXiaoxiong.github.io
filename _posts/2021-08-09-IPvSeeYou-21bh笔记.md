@@ -4,7 +4,7 @@ title: IPvSeeYou-21bh笔记
 date: 2021-08-09
 categories: 技术调研
 excerpt: IPvSeeYou：通过IPv6地址中泄漏的标识进行街道级地理位置定位
-tags: IPv6
+tags: IPv6 blackhat
 ---
 
 * content
@@ -16,20 +16,22 @@ tags: IPv6
 
 ## 数据关联流程
 
-1. IPv6 地址和 MAC 地址存在相关关系
+整个介绍的说明逻辑核心是三个相关关系，通过这三个相关关系关联，将IPv6地址和地理位置关联。
+
+1.IPv6 地址和 MAC 地址存在相关关系
 
 ![1628492391392](/img/IPvSeeYou/ca4f6742c3354f1bb35b3cb0ba7777d6.png)
 
 
-2. WiFi 地理地址和 BSSID 存在相关关系 
+2.WiFi 地理地址和 BSSID 存在相关关系 
 
 ![1628492450525](/img/IPvSeeYou/b65ef39abc884852b18326f807adf2de.png)
 
-3. WAN MAC 地址 和 BSSID 存在一定相关关系
+3.WAN MAC 地址 和 BSSID 存在一定相关关系
 
 ![1628492528407](/img/IPvSeeYou/dbc3af567750439482dd3c1df49de0a8.png)
 
-通过这三个相关关系，将 IPv6地址和地理位置关联。
+
 
 ## IPv6 地址和 MAC 相关关系介绍
 
@@ -93,3 +95,9 @@ tags: IPv6
     * Askey Corp OUI 在瑞士有很多
     * Swisscom 是一家主要的瑞士 ISP，提供 Askey 路由器作为其标准家用 WLAN 设备
 * 可以推断 ISP 的覆盖区域，推断非EUI-64终端设备的大致位置
+
+## 参考链接
+
+1. https://www.blackhat.com/us-21/briefings/schedule/#ipvseeyou-exploiting-leaked-identifiers-in-ipv-for-street-level-geolocation-22889
+2. https://github.com/6int/IPvSeeYou/blob/main/IPvSeeYou.py
+3. [yarrp 随机高速有源拓扑发现工具](https://www.cmand.org/yarrp/)
