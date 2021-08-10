@@ -14,9 +14,15 @@ icon: heart
 
 python | java | php
   
-CVE-2018-8026  
+* CVE-2018-8026  
+
 [https://issues.apache.org/jira/browse/SOLR-12450](https://issues.apache.org/jira/browse/SOLR-12450)  
 [https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201807.mbox/%3C0cdc01d413b7%24f97ba580%24ec72f080%24%40apache.org%3E](https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201807.mbox/%3C0cdc01d413b7%24f97ba580%24ec72f080%24%40apache.org%3E)
+
+
+* CVE-2020-15651 
+
+[https://bugzilla.mozilla.org/show_bug.cgi?id=1649160](https://bugzilla.mozilla.org/show_bug.cgi?id=1649160)
 
 ## 联系我
 
