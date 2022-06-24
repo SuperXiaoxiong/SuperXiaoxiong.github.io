@@ -33,17 +33,17 @@ https://github.com/deathmarine/Luyten/releases  基于 Procyon 0.5.33 开发的
 
 作者给出的是一串`base64`编码，解码后直接是对应内存马的class文件；可以直接使用idea自带的反编译查看源码
 
-![1.png](/img/resin_mem_shell/1.png)
+![1.png](/img/resin_mem_shell/1.PNG)
 
 `Overbrilliantly`类：包含了一个构造器、两个静态变量和 static 静态代码块
 
 主要逻辑static静态代码块中，样本字符串解密如原文描述类似："字符串加密为xor，长度为7，加密后的字符串第一位为本次待解密字符串的长度"。我们的目的是为了能够还原`resin` 内存马，`debug` 过程直接跳过解密过程，在关键部分进行断点。
 
-![2.png](/img/resin_mem_shell/2.png)
+![2.png](/img/resin_mem_shell/2.PNG)
 
 `var0` 是前段解密代码还原出来的字符串数组
 
-![4.png](/img/resin_mem_shell/4.png)
+![4.png](/img/resin_mem_shell/4.PNG)
 
 代码逻辑中利用反射方法 loadCLass 加载了 `com.caucho.server.dispatch.ServletInvovation` , `com.caucho.server.dispatch.FilterConfigImpl` 等类，这些是 `resin` 容器的基础类，可以看出这是一个针对 `resin` 容器的内存马，如果要进行debug 还需要引入`resin`依赖或者直接创建一个运行在`resin`上的`web`服务。
 
@@ -56,7 +56,7 @@ https://github.com/deathmarine/Luyten/releases  基于 Procyon 0.5.33 开发的
 
 在反射加载完必要的依赖`class`之后，该样本调用 `java.uti.Base64$decoder/javax.xml.bind.DatatypeConverter.parseBase64Binary`对字符串 var17 进行解码；然后使用 `defineClass`  类加载器进行了加载，其中 var17 字符串就是样本构建的恶意`filter`类的`base64`编码，类名 `PseudodramaticallyFilter`。
 
-![8.png](/img/resin_mem_shell/8.png)
+![8.png](/img/resin_mem_shell/8.PNG)
 
 ### 创建并添加 filterConfigImpl 实例
 
