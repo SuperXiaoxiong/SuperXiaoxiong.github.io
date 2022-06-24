@@ -33,17 +33,17 @@ https://github.com/deathmarine/Luyten/releases  基于 Procyon 0.5.33 开发的
 
 作者给出的是一串`base64`编码，解码后直接是对应内存马的class文件；可以直接使用idea自带的反编译查看源码
 
-![1.PNG](/img/resin_mem_shell/1.PNG)
+![1.png](/img/resin_mem_shell/1.png)
 
 `Overbrilliantly`类：包含了一个构造器、两个静态变量和 static 静态代码块
 
 主要逻辑static静态代码块中，样本字符串解密如原文描述类似："字符串加密为xor，长度为7，加密后的字符串第一位为本次待解密字符串的长度"。我们的目的是为了能够还原`resin` 内存马，`debug` 过程直接跳过解密过程，在关键部分进行断点。
 
-![2.PNG](/img/resin_mem_shell/2.PNG)
+![2.png](/img/resin_mem_shell/2.png)
 
 `var0` 是前段解密代码还原出来的字符串数组
 
-![4.PNG](/img/resin_mem_shell/4.PNG)
+![4.png](/img/resin_mem_shell/4.png)
 
 代码逻辑中利用反射方法 loadCLass 加载了 `com.caucho.server.dispatch.ServletInvovation` , `com.caucho.server.dispatch.FilterConfigImpl` 等类，这些是 `resin` 容器的基础类，可以看出这是一个针对 `resin` 容器的内存马，如果要进行debug 还需要引入`resin`依赖或者直接创建一个运行在`resin`上的`web`服务。
 
@@ -56,13 +56,13 @@ https://github.com/deathmarine/Luyten/releases  基于 Procyon 0.5.33 开发的
 
 在反射加载完必要的依赖`class`之后，该样本调用 `java.uti.Base64$decoder/javax.xml.bind.DatatypeConverter.parseBase64Binary`对字符串 var17 进行解码；然后使用 `defineClass`  类加载器进行了加载，其中 var17 字符串就是样本构建的恶意`filter`类的`base64`编码，类名 `PseudodramaticallyFilter`。
 
-![8.PNG](/img/resin_mem_shell/8.PNG)
+![8.png](/img/resin_mem_shell/8.png)
 
 ### 创建并添加 filterConfigImpl 实例
 
 在加载恶意 `filter`之后 `PseudodramaticallyFilter`, 通过 `newInstance` 创造类实例， 并调用反射方法 `setFilterName` 及利用反射对 `_filterClassName`, `_filterClass` 字段赋值，生成一个 `PseudodramaticallyFilter`的 `filterConfigImpl`实例，然后添加到当前 `WebApp` 中
 
-![9.PNG](/img/resin_mem_shell/9.PNG)
+![9.png](/img/resin_mem_shell/9.png)
 
 由于相应`_filterClassName`, `_filterClass` 都有 public 操作方法，可直接显示赋值如下
 
@@ -81,17 +81,17 @@ webapp.addFilter(filterConfigimpl);
 
 `filterConfigImpl` 实现了 `javax.servlet.FilterConfig` 和 `javax.servlet.FilterRegistration.Dynamic` 接口
 
-![10.PNG](/img/resin_mem_shell/10.PNG)
+![10.png](/img/resin_mem_shell/10.png)
 
 动态添加的恶意`filter`模块
 
-![11.PNG](/img/resin_mem_shell/11.PNG)
+![11.png](/img/resin_mem_shell/11.png)
 
 ### 创建相应 filter 路由映射
 
 通过创建 `FilterMapping` 实例, 并设置相对应的路由，这里可以看见恶意样本是对所有的路径进行匹配
 
-![12.PNG](/img/resin_mem_shell/12.PNG)
+![12.png](/img/resin_mem_shell/12.png)
 
 相对应的显示调用源码如下
 
@@ -140,7 +140,7 @@ fieldWebappFilterMapper.set(webapp, filtermapper);
 
 调整之后的 _filterMapper
 
-![14.PNG](/img/resin_mem_shell/14.PNG)
+![14.png](/img/resin_mem_shell/14.png)
 
 ## 完整的 resin 内存马逻辑
 
@@ -237,17 +237,17 @@ webapp.getClass().getMethod("clearCache").invoke(webapp);
 
 类结构如下图所示，`defineClass` 加载类时会调用static静态代码块，对字符串进行解密。
 
-![6.PNG](/img/resin_mem_shell/6.PNG)
+![6.png](/img/resin_mem_shell/6.png)
 
 在 `dofilter` 模块，写明的匹配处理逻辑
 
-![15.PNG](/img/resin_mem_shell/15.png)
+![15.png](/img/resin_mem_shell/15.png)
 
 样本使用`User-Agent`头做为匹配字符串 `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/531.26 (KHTML, like Gecko) Chrome/86.0.4240.138 Safari/531.26`, 使用AES 加密会话，然后进行 `base64` 解码及类加载运行。
 
 该`User-Agent`虽然在格式上和`Chrome`浏览器相同，但是未在`https://user-agents.net/`查询到相应的版本，隐蔽效果拔群。
 
-![16.PNG](/img/resin_mem_shell/16.PNG)
+![16.png](/img/resin_mem_shell/16.png)
 
 ## 备注
 
