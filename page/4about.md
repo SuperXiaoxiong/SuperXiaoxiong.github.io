@@ -5,7 +5,7 @@ permalink: /about/
 icon: heart
 ---
 * content
-  {:toc}
+{:toc}
 
 ## 关于我
 
@@ -41,8 +41,6 @@ icon: heart
 
   * [https://issues.apache.org/jira/browse/SOLR-12450](https://issues.apache.org/jira/browse/SOLR-12450)
   * [https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201807.mbox/%3C0cdc01d413b7%24f97ba580%24ec72f080%24%40apache.org%3E](https://mail-archives.apache.org/mod_mbox/lucene-solr-user/201807.mbox/%3C0cdc01d413b7%24f97ba580%24ec72f080%24%40apache.org%3E)
-
-
 
 ## 联系我
 
