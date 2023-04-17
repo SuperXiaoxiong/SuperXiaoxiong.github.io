@@ -49,7 +49,7 @@ icon: heart
 
 ## 友情链接
 
-[wangjieqiang](http://wangjieqiang.com/) | [neargle](http://blog.neargle.com/)
+[neargle](http://blog.neargle.com/)
 
 ## Comments
 
