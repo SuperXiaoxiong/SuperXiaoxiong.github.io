@@ -21,6 +21,7 @@ icon: heart
 * CVE-2024-41169
   * Apache Zeppelin是一款基于Web的Notebook产品，能够交互式数据分析。目前是 `Apache Software Foundation`的顶级项目。
   * 未授权任意文件读导致远程代码执行.
+  * https://lists.apache.org/thread/moyym04993c8owh4h0qj98r43tbo8qdd
 * CVE-2024-29007
   * Apache CloudStack 是一个开源的具有高可用性及扩展性的云计算平台。在 2011 年被 Citrix 以超过二亿美金价格收购，随后又被捐献给 Apache 基金会。目前是 `Apache Software Foundation`的顶级项目
   * Apache CloudStack ssrf 中危
